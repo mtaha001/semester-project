@@ -1,4 +1,4 @@
-# User-stories
+# semester-project
 
 CS350, Old Dominion Univ., Spring 2023
 
