@@ -19,3 +19,4 @@ build
 # Ignore build and bin directories
 /build/
 /bin/
+gradle/wrapper/gradle-wrapper.properties
