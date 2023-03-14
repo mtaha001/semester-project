@@ -31,11 +31,16 @@ public class Semester {
      */
     public Semester(String directoryLoc) {
 
+        directoryLocation = directoryLoc;
         // Code will be the same as directory name but without slashes.
         code = directoryLoc.replaceAll("[/\\\\]", "");
     }
 
     public String getCode() {
         return code;
+    }
+
+    public String getDirLoc() {
+        return directoryLocation;
     }
 }
