@@ -12,6 +12,8 @@ public class Semester {
 
     private String directoryLocation;
     private String code;
+    private String year; // Academic year
+    private String season; // Fall, Spring, or Summer
     private Date preRegistrationDate;
     private Date addDeadlineDate;
     private ArrayList<Snapshot> snapshots;
@@ -23,10 +25,15 @@ public class Semester {
      * @param directoryLoc - String representing the directory
      *                     containing the semester's data
      * @post condition - Semester object is created and has a directoryLocation,
-     *       a semester code, List of Snapshots, preReg date, addDeadline date,
+     *       a semester code, year, season, List of Snapshots, preReg date,
+     *       addDeadline date,
      *       and a List of Offerings.
      */
     public Semester(String directoryLoc) {
+        code = directoryLoc.replaceAll("[/\\\\]", "");
+    }
 
+    public String getCode() {
+        return code;
     }
 }

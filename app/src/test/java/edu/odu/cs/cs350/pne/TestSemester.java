@@ -15,20 +15,21 @@ class TestSemester {
         // historical enrollment directory provided.
 
         // List of directories will be read into an ArrayList.
-        ArrayList HistoricalEnrDirectories = new ArrayList();
+        ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
         HistoricalEnrDirectories.add("201710/");
         HistoricalEnrDirectories.add("201810/");
 
         // new Semester obj should be created for each semester directory in the list.
         // whether a driver or the Semester class itself should do this isn't known yet.
-        for (int i = 0; i < 5; i++) {
 
-            // Semester should have a constructor that takes a directory as parameter
-            Semester s = new Semester(HistoricalEnrDirectories.get(i));
-            assertNotNull(s.getSemesterCode(), "semester should have a code");
-        }
+        // Semester should have a constructor that takes a directory as parameter
+        Semester s1 = new Semester(HistoricalEnrDirectories.get(0));
+        assertNotNull(s1.getCode(), "semester should have a code");
+        assertEquals(s1.getCode(), "201710");
 
-        assertThat(s1.getSemesterCode(), equals("201710"));
+        Semester s2 = new Semester(HistoricalEnrDirectories.get(1));
+        assertNotNull(s2.getCode(), "semester should have a code");
+        assertEquals(s2.getCode(), "201810");
 
     }
 
