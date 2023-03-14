@@ -30,6 +30,8 @@ public class Semester {
      *       and a List of Offerings.
      */
     public Semester(String directoryLoc) {
+
+        // Code will be the same as directory name but without slashes.
         code = directoryLoc.replaceAll("[/\\\\]", "");
     }
 

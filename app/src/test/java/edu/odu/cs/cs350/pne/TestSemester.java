@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 class TestSemester {
     @Test
-    void inputHistoricalEnrDirectory() {
+    void yieldsCorrectSemesterCode() {
         // Tests that the correct Semester objs are created for each
         // historical enrollment directory provided.
 
@@ -24,10 +24,14 @@ class TestSemester {
 
         // Semester should have a constructor that takes a directory as parameter
         Semester s1 = new Semester(HistoricalEnrDirectories.get(0));
+        assertNotNull(s1.getDirLoc(), "semester should have a directory location");
+        assertEquals(s1.getDirLoc(), "201710/");
         assertNotNull(s1.getCode(), "semester should have a code");
         assertEquals(s1.getCode(), "201710");
 
         Semester s2 = new Semester(HistoricalEnrDirectories.get(1));
+        assertNotNull(s2.getDirLoc(), "semester should have a directory location");
+        assertEquals(s2.getDirLoc(), "201810/");
         assertNotNull(s2.getCode(), "semester should have a code");
         assertEquals(s2.getCode(), "201810");
 
