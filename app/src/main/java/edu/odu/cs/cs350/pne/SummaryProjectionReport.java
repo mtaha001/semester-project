@@ -1,7 +1,4 @@
-/*
- * Snapshot class, as written in the UML diagram
- * A Snapshot contains multiple Sections.
- */
+//summary projection
 
 package edu.odu.cs.cs350.pne;
 
