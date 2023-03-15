@@ -38,7 +38,7 @@ class TestSemester {
     }
 
     @Test
-    void yieldsCorrectYearandSeason() {
+    void yieldsCorrectYearAndSeason() {
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
         HistoricalEnrDirectories.add("201710/");
         HistoricalEnrDirectories.add("201820/");
