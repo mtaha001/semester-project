@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 class TestSemester {
     @Test
-    void yieldsCorrectSemesterCode() {
-        // Tests that the correct Semester objs are created for each
-        // historical enrollment directory provided.
+    void yieldsCorrectDirAndCode() {
+        // Tests that the correct Semester codes and directoryLocations
+        // are created for Semester objects
 
         // List of directories will be read into an ArrayList.
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
@@ -37,5 +37,25 @@ class TestSemester {
 
     }
 
+    @Test
+    void yieldsCorrectYearandSeason() {
+        ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
+        HistoricalEnrDirectories.add("201710/");
+        HistoricalEnrDirectories.add("201820/");
+        HistoricalEnrDirectories.add("201930/");
+
+        Semester s1 = new Semester(HistoricalEnrDirectories.get(0));
+        assertNotNull(s1.getYear(), "semester should have an associated year");
+        assertEquals(s1.getYear(), 2017);
+        assertNotNull(s1.getSeason(), "semester should have an associated season");
+        assertEquals(s1.getSeason(), "Fall");
+
+        Semester s2 = new Semester(HistoricalEnrDirectories.get(1));
+        assertNotNull(s2.getDirLoc(), "semester should have an associated year");
+        assertEquals(s2.getDirLoc(), 2018);
+        assertNotNull(s2.getCode(), "semester should have an associated season");
+        assertEquals(s2.getCode(), "Summer");
+
+    }
     // Add more tests regarding the Semester class below..
 }
