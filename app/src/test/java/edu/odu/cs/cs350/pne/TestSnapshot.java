@@ -1,6 +1,6 @@
 
 /*
- * Unit testing for the Semester class 
+ * Unit testing for the Snapshot
  */
 package edu.odu.cs.cs350.pne;
 
