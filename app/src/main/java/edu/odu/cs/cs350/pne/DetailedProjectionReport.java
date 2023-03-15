@@ -7,8 +7,14 @@ import java.io.*;
 import java.io.FileOutputStream;
 
 
+
 public class DetailedProjectionReport {
     private InputStream filein;
     private FileOutputStream fileout; 
     private String filepath; 
+
+    public DetailedProjectionReport()
+    {
+        this.filepath = "";
+    }
 }
