@@ -12,7 +12,7 @@ public class Semester {
 
     private String directoryLocation;
     private String code;
-    private String year; // Academic year
+    private int year; // Academic year
     private String season; // Fall, Spring, or Summer
     private Date preRegistrationDate;
     private Date addDeadlineDate;
@@ -32,15 +32,46 @@ public class Semester {
     public Semester(String directoryLoc) {
 
         directoryLocation = directoryLoc;
+
         // Code will be the same as directory name but without slashes.
         code = directoryLoc.replaceAll("[/\\\\]", "");
     }
 
+    /**
+     * getCode()
+     * 
+     * @return the Semester's code
+     */
     public String getCode() {
         return code;
     }
 
+    /**
+     * getDirLoc()
+     * 
+     * @return the directory of the semester's data (same as what was input
+     *         to command-line)
+     *         This may not be utilized.
+     */
     public String getDirLoc() {
         return directoryLocation;
+    }
+
+    /**
+     * getYear()
+     * 
+     * @return the Semester's year
+     */
+    public int getYear() {
+        return year;
+    }
+
+    /**
+     * getSeason()
+     * 
+     * @return the Semester's season (Fall, Spring, or Summer)
+     */
+    public String getSeason() {
+        return season;
     }
 }
