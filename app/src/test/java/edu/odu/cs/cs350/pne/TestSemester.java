@@ -63,5 +63,10 @@ class TestSemester {
         assertEquals(s3.getSeason(), "Summer");
 
     }
+
+    @Test
+    void yieldsCorrectDates() {
+
+    }
     // Add more tests regarding the Semester class below..
 }
