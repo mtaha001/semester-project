@@ -1,7 +1,10 @@
 /*
  * Semester class, as written in the UML diagram
  * A semester has multiple Snapshots and multiple Offerings.
- * A DetailedProjReport and SummaryProjReport depend on a Semester.
+ * 
+ * In the SummaryProjectionReport class, some Semesters are used for
+ * historical data, while one Semester will be used as the desired
+ * projection Semester.
  */
 package edu.odu.cs.cs350.pne;
 
@@ -35,6 +38,25 @@ public class Semester {
 
         // Code will be the same as directory name but without slashes.
         code = directoryLoc.replaceAll("[/\\\\]", "");
+
+        // Extract semester's year from its code (first 4 chars) and convert to int:
+        year = Integer.parseInt(code.substring(0, 4));
+
+        // Extract semester's season from its code (last 2 chars) and convert
+        // to a representative string:
+        String seasonID;
+        seasonID = code.substring(4, 6);
+        switch (seasonID) {
+            case "10":
+                season = "Fall";
+                break;
+            case "20":
+                season = "Spring";
+                break;
+            case "30":
+                season = "Summer";
+                break;
+        }
     }
 
     /**
@@ -74,4 +96,5 @@ public class Semester {
     public String getSeason() {
         return season;
     }
+
 }

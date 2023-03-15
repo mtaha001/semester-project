@@ -51,10 +51,16 @@ class TestSemester {
         assertEquals(s1.getSeason(), "Fall");
 
         Semester s2 = new Semester(HistoricalEnrDirectories.get(1));
-        assertNotNull(s2.getDirLoc(), "semester should have an associated year");
-        assertEquals(s2.getDirLoc(), 2018);
-        assertNotNull(s2.getCode(), "semester should have an associated season");
-        assertEquals(s2.getCode(), "Summer");
+        assertNotNull(s2.getYear(), "semester should have an associated year");
+        assertEquals(s2.getYear(), 2018);
+        assertNotNull(s2.getSeason(), "semester should have an associated season");
+        assertEquals(s2.getSeason(), "Spring");
+
+        Semester s3 = new Semester(HistoricalEnrDirectories.get(2));
+        assertNotNull(s3.getYear(), "semester should have an associated year");
+        assertEquals(s3.getYear(), 2019);
+        assertNotNull(s3.getSeason(), "semester should have an associated season");
+        assertEquals(s3.getSeason(), "Summer");
 
     }
     // Add more tests regarding the Semester class below..
