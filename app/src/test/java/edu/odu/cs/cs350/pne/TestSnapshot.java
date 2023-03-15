@@ -14,7 +14,9 @@ public class TestSnapshot {
 
     @Test
     void testDefaultConstructor{
-        
+        Snapshot s1 =  new Snapshot();
+        Snapshot s2 =  new Snapshot();
+        assertThat(s2.equal(s1),is(true));
     }
 
 }
