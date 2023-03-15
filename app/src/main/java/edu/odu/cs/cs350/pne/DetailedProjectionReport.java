@@ -8,6 +8,6 @@ import java.io.FileOutputStream;
 
 
 public class DetailedProjectionReport {
-    private InputStream file;
+    private InputStream filein;
     private FileOutputStream fileout; 
 }
