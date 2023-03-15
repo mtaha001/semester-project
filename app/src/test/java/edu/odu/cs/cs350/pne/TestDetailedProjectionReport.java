@@ -26,7 +26,6 @@ public class TestDetailedProjectionReport {
     public void TestDetailedProjectionReportDefaultConstructor()
     {
         assertThat(DetailedReport1.getFilePath(, is("")));
-
     }
 
     
