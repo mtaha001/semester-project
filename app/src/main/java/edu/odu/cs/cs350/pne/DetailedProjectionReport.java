@@ -9,8 +9,8 @@ import java.io.FileOutputStream;
 
 
 public class DetailedProjectionReport {
-    private InputStream filein;
-    private FileOutputStream fileout; 
+    private InputStream fileIn;
+    private FileOutputStream fileOut; 
     private String filePath; 
 
     // Default Constructor for DPR
@@ -24,7 +24,7 @@ public class DetailedProjectionReport {
         return filePath; 
     }
 
-    
+
 
 
 }
