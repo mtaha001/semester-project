@@ -6,12 +6,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-// import static org.junit.jupiter.api.Assertions.*;
-// import static org.hamcrest.CoreMatchers.*;
-// import static org.hamcrest.MatcherAssert.assertThat;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
 
 
 public class TestDetailedProjectionReport {
@@ -30,16 +29,16 @@ public class TestDetailedProjectionReport {
     @Test
     public void TestDetailedProjectionReportDefaultConstructor()
     {
-        assertThat(DetailedReport1.getFilePath(), is(""));
+        assertEquals(DetailedReport1.getFilePath(), "");
 
     }
 
     @Test
     public void TestSetFilePath()
     {
-        assertThat(DetailedReport1.getFilePath(), is(""));
+        assertEquals(DetailedReport1.getFilePath(),"");
         DetailedReport1.setPath(outPath);
-        assertThat(DetailedReport1.getFilePath(), is("C:/tnguy039/OutPut"));
+        assertEquals(DetailedReport1.getFilePath(),"C:/tnguy039/OutPut");
     }
 
 
