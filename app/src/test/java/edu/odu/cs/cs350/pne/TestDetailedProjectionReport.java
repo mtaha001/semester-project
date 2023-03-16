@@ -37,7 +37,7 @@ public class TestDetailedProjectionReport {
     public void TestSetFilePath()
     {
         assertEquals(DetailedReport1.getFilePath(),"");
-        DetailedReport1.setPath(outPath);
+        DetailedReport1.setFilePath(outPath);
         assertEquals(DetailedReport1.getFilePath(),"C:/tnguy039/OutPut");
     }
 

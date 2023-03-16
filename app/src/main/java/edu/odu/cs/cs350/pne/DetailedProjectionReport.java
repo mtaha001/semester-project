@@ -12,17 +12,25 @@ public class DetailedProjectionReport {
     private InputStream fileIn;
     private FileOutputStream fileOut; 
     private String filePath; 
+    private String newFilePath;
 
     // Default Constructor for DPR
     public DetailedProjectionReport()
     {
-        this.filePath = "";
+        this.filePath ="";
     }
 
     // Getter for filepath
     public String getFilePath(){
         return filePath; 
     }
+
+
+    public void setFilePath(String newFilePath){
+        this.filePath = newFilePath;
+    }
+
+
 
     
 
