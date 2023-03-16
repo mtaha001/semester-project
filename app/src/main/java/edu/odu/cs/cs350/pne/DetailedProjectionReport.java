@@ -16,7 +16,7 @@ public class DetailedProjectionReport {
     // Default Constructor for DPR
     public DetailedProjectionReport()
     {
-        this.filepath = "";
+        this.filePath = "";
     }
 
     // Getter for filepath
