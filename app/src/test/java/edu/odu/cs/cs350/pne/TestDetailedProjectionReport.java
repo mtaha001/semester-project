@@ -15,10 +15,12 @@ public class TestDetailedProjectionReport {
 
     public DetailedProjectionReport DetailedReport1;
     public String filePath ;
+    public String outPath; 
 
     @BeforeEach 
     public void setUp() throws Exception{
         DetailedReport1 = new DetailedProjectionReport();
+        outPath = "C:/tnguy039/OutPut";
     }
 
 
@@ -26,7 +28,18 @@ public class TestDetailedProjectionReport {
     public void TestDetailedProjectionReportDefaultConstructor()
     {
         assertThat(DetailedReport1.getFilePath(), is(""));
+
     }
+
+    @Test
+    public void TestSetFilePath()
+    {
+        assertThat(DetailedReport1.getFilePath(), is(""));
+        DetailedReport1.setPath(outPath);
+        assertThat(DetailedReport1.getFilePath(), is("C:/tnguy039/OutPut"));
+    }
+
+
 
     
 }
