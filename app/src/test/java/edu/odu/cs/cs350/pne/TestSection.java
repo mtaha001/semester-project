@@ -13,7 +13,7 @@ public class TestSection {
 
     private Section section;
     
-    @Before
+    @BeforeEach
     public void setUp() {
         section = new Section();
     }
