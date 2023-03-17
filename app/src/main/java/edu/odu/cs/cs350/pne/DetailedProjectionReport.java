@@ -20,7 +20,11 @@ public class DetailedProjectionReport {
         this.filePath ="";
     }
 
-    // Getter for filepath
+    /**
+     * getFilePath()
+     * 
+     * @return filePath 
+     */
     public String getFilePath(){
         return filePath; 
     }
