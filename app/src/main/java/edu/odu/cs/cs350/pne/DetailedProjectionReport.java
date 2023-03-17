@@ -25,7 +25,7 @@ public class DetailedProjectionReport {
         return filePath; 
     }
 
-
+    //Set filepath
     public void setFilePath(String newFilePath){
         this.filePath = newFilePath;
     }

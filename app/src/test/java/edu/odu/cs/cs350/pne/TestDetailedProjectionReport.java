@@ -32,7 +32,7 @@ public class TestDetailedProjectionReport {
         assertEquals(DetailedReport1.getFilePath(), "");
 
     }
-
+  
     @Test
     public void TestSetFilePath()
     {
