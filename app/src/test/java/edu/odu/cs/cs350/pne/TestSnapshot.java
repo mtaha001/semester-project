@@ -13,11 +13,16 @@ import java.util.ArrayList;
 public class TestSnapshot {
     
 
-    @Test
-    void testDefaultConstructor(){
+    @BeforeEach
+    public void setUp(){
         Snapshot s1 =  new Snapshot();
         Snapshot s2 =  new Snapshot();
-        //assertThat(s2,equalTo(s1));
+    }
+
+    @Test
+    void testDefaultConstructor(){
+
+        assertEquals(0, s1.getSections().size());
     }
 
 }
