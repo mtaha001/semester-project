@@ -15,5 +15,21 @@ public class Snapshot {
 
     private ArrayList<Section> sections;
     private LocalDate date;
+
+
+    //default constructor
+    public Snapshot(){
+        
+    }
+
+    public public ArrayList<Section> getSections() {
+        return sections;
+    }
+        
+    
+    
+
+
+
     
 }
