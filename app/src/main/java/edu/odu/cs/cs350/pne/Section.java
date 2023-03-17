@@ -6,10 +6,15 @@ package edu.odu.cs.cs350.pne;
 
 public class Section {
 
-    private int CRN;
     private String SUBJ;
     private String CRSE;
-
+    private int XLSTCAP;
+    private int ENR;
+    private String LINK;
+    private String XLSTGROUP;
+    private int OVERALLCAP;
+    private int OVERALLENR;
+    private int CRN;
     
     /**
      * getSUBJ()
@@ -21,15 +26,6 @@ public class Section {
     }
 
     /**
-     * getCRN()
-     * 
-     * @return the CRN
-     */
-    public int getCRN() {
-        return CRN;
-    }
-
-    /**
      * getCRSE()
      * 
      * @return the course
@@ -38,6 +34,68 @@ public class Section {
         return CRSE;
     }
 
+    /**
+     * getXLSTCAP()
+     * 
+     * @return the crosslist cap
+     */
+    public int getXLSTCAP() {
+        return XLSTCAP;
+    }
+
+    /**
+     * getENR()
+     * 
+     * @return enrolled
+     */
+    public int getENR() {
+        return ENR;
+    }
+    
+    /**
+     * getLINK()
+     * 
+     * @return linked
+     */
+    public String getLINK() {
+        return LINK;
+    }
+
+    /**
+     * getXLSTGROUP()
+     * 
+     * @return grouped crosslisted
+     */
+    public String getXLSTGROUP() {
+        return XLSTGROUP;
+    }
+    
+    /**
+     * getOVERALLCAP()
+     * 
+     * @return overall capacity
+     */
+    public int getOVERALLCAP() {
+        return OVERALLCAP;
+    }
+    
+    /**
+     * getOVERALLENR()
+     * 
+     * @return enrolled
+     */
+    public int getOVERALLENR() {
+        return OVERALLENR;
+    }
+
+    /**
+     * getCRN()
+     * 
+     * @return the CRN
+     */
+    public int getCRN() {
+        return CRN;
+    }
 
 }
 
