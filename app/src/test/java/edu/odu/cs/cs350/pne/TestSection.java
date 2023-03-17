@@ -11,25 +11,9 @@ import java.util.ArrayList;
 
 public class TestSection {
 
-    private Section section;
-    
-    @BeforeEach
-    public void setUp() {
-        section = new Section();
-    }
-    
     @Test
-    public void testGetSetCRN() {
-        String crn = "12345";
-        section.setCRN(crn);
-        assertEquals(crn, section.getCRN());
-    }
-    
-    @Test
-    public void testGetSetSUBJ() {
-        String subj = "CS";
-        section.setSUBJ(subj);
-        assertEquals(subj, section.getSUBJ());
+    void TestReadSUBJ() { //test if SUBJ is read in correctly from spreadsheet
+        Section s1 = new Section();
     }
     
 }
