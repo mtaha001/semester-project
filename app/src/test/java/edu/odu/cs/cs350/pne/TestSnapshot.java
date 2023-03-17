@@ -15,17 +15,19 @@ import java.util.ArrayList;
 public class TestSnapshot {
     
 
-    private Snapshot s1; 
-    private Snapshot s2; 
+    // private Snapshot s1; 
+    // private Snapshot s2; 
 
-    @BeforeEach
-    public void setUp (){
-        s1 =  new Snapshot();
-    }
+    // @BeforeEach
+    // public void setUp (){
+    //     s1 =  new Snapshot();
+    // }
 
     @Test
     void testDefaultConstructor() {
 
+
+        Snapshot s1 = new Snapshot();
         // Ensure that the getSections() method returns an empty ArrayList
         assertTrue(s1.getSections().isEmpty());
     }
