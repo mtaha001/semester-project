@@ -17,13 +17,16 @@ public class Snapshot {
     private LocalDate date;
 
 
-    //default constructor
-    public Snapshot(){
-        
+    public Snapshot(ArrayList<Section> sections) {
+        this.sections = sections;
     }
 
-    public public ArrayList<Section> getSections() {
+    public ArrayList<Section> getSections() {
         return sections;
+    }
+
+    public void setSections(ArrayList<Section> sections) {
+        this.sections = sections;
     }
         
     

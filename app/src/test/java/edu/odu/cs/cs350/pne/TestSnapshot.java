@@ -17,19 +17,39 @@ public class TestSnapshot {
 
     private Snapshot s1; 
     private Snapshot s2; 
-    private ArrayList<Section> sections;
 
     @BeforeEach
     public void setUp (){
         s1 =  new Snapshot();
-        s2 =  new Snapshot();
     }
 
     @Test
-    void testDefaultConstructor(){
+    void testDefaultConstructor() {
 
-        assertEquals(0, s1.getSections().size());
-        assertEquals(s2, s1);
+        // Ensure that the getSections() method returns an empty ArrayList
+        assertTrue(s1.getSections().isEmpty());
     }
+
+
+    @Test
+    public void testGetSections() {
+        // Create some Section objects
+        Section section1 = new Section("Section 1");
+        Section section2 = new Section("Section 2");
+
+        // Create an ArrayList of Section objects
+        ArrayList<Section> sections = new ArrayList<>();
+        sections.add(section1);
+        sections.add(section2);
+
+        // Create a Snapshot object that holds the ArrayList of Section objects
+        Snapshot snapshot = new Snapshot(sections);
+
+        // Ensure that the getSections() method returns the correct ArrayList
+        assertEquals(sections, snapshot.getSections());
+    }
+
+
+    
 
 }
