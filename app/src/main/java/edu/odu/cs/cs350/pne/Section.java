@@ -2,11 +2,11 @@ package edu.odu.cs.cs350.pne;
 
 // import com.opencsv.bean.CsvBindByPosition;
 // import com.opencsv.bean.CsvToBean;
-// import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByName;
 
 public class Section {
 
-    private String SUBJ;
+    //private String SUBJ;
     private String CRSE;
     private int XLSTCAP;
     private int ENR;
@@ -14,8 +14,19 @@ public class Section {
     private String XLSTGROUP;
     private int OVERALLCAP;
     private int OVERALLENR;
-    private int CRN;
+    //private int CRN;
     
+
+    @CsvBindByName(column = "CRN")
+    private String CRN;
+
+    @CsvBindByName(column = "SUBJ")
+    private String SUBJ;
+
+
+
+
+
     /**
      * getSUBJ()
      * 
