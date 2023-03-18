@@ -8,8 +8,12 @@
  */
 package edu.odu.cs.cs350.pne;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Semester {
 
@@ -17,8 +21,8 @@ public class Semester {
     private String code;
     private int year; // Academic year
     private String season; // Fall, Spring, or Summer
-    private Date preRegistrationDate;
-    private Date addDeadlineDate;
+    private String preRegistrationDate;
+    private String addDeadlineDate;
     private ArrayList<Snapshot> snapshots;
     private ArrayList<Offering> offerings;
 
@@ -27,12 +31,13 @@ public class Semester {
      * 
      * @param directoryLoc - String representing the directory
      *                     containing the semester's data
+     * @throws IOException
      * @post condition - Semester object is created and has a directoryLocation,
      *       a semester code, year, season, List of Snapshots, preReg date,
      *       addDeadline date,
      *       and a List of Offerings.
      */
-    public Semester(String directoryLoc) {
+    public Semester(String directoryLoc) throws IOException {
 
         directoryLocation = directoryLoc;
 
@@ -56,6 +61,36 @@ public class Semester {
             case "30":
                 season = "Summer";
                 break;
+        }
+
+        // Create a File object representing the directory
+        File directory = new File(directoryLocation);
+
+        // Create a File object representing the dates.txt file
+        File file = new File(directory, "dates.txt");
+
+        try {
+            // Create a FileReader object to read the file
+            FileReader fileReader = new FileReader(file);
+
+            // Create a BufferedReader object to read the file line by line
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+            // Read the file line by line
+            String line;
+
+            // Read both lines of dates.txt file
+            line = bufferedReader.readLine();
+            preRegistrationDate = line; // read pre-registration date
+
+            line = bufferedReader.readLine();
+
+            // Close the BufferedReader
+            bufferedReader.close();
+
+        } catch (FileNotFoundException e) {
+            throw new IOException("Missing dates.txt in semester code.");
+
         }
     }
 
@@ -95,6 +130,10 @@ public class Semester {
      */
     public String getSeason() {
         return season;
+    }
+
+    public String getPreRegDate() {
+        return preRegistrationDate;
     }
 
 }

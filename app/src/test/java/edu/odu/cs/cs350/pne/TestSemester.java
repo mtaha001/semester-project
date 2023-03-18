@@ -6,11 +6,12 @@ package edu.odu.cs.cs350.pne;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 class TestSemester {
     @Test
-    void yieldsCorrectDirAndCode() {
+    void yieldsCorrectDirAndCode() throws IOException {
         // Tests that the correct Semester codes and directoryLocations
         // are created for Semester objects
 
@@ -38,7 +39,7 @@ class TestSemester {
     }
 
     @Test
-    void yieldsCorrectYearAndSeason() {
+    void yieldsCorrectYearAndSeason() throws IOException {
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
         HistoricalEnrDirectories.add("201710/");
         HistoricalEnrDirectories.add("201820/");
@@ -65,7 +66,7 @@ class TestSemester {
     }
 
     @Test
-    void yieldsCorrectDates() {
+    void yieldsCorrectDates() throws IOException {
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
         HistoricalEnrDirectories.add("202220/");
 
