@@ -23,9 +23,15 @@ public class Section {
     @CsvBindByName(column = "SUBJ")
     private String SUBJ;
 
+    @CsvBindByName(column = "ENR")
 
+    @CsvBindByName(column = "XLSTCAP")
 
+    @CsvBindByName(column = "XLSTGROUP")
 
+    @CsvBindByName(column = "OVERALL CAP")
+
+    @CsvBindByName(column = "OVERALL ENR")
 
     /**
      * getSUBJ()
