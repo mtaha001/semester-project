@@ -41,9 +41,12 @@ class TestSemester {
     @Test
     void yieldsCorrectYearAndSeason() throws IOException {
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
-        HistoricalEnrDirectories.add("201710/");
-        HistoricalEnrDirectories.add("201820/");
-        HistoricalEnrDirectories.add("201930/");
+        HistoricalEnrDirectories.add(
+                "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\201710");
+        HistoricalEnrDirectories.add(
+                "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\201820");
+        HistoricalEnrDirectories.add(
+                "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\201930");
 
         Semester s1 = new Semester(HistoricalEnrDirectories.get(0));
         assertNotNull(s1.getYear(), "semester should have an associated year");
@@ -67,10 +70,9 @@ class TestSemester {
 
     @Test
     void yieldsCorrectDates() throws IOException {
-        ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
-        HistoricalEnrDirectories.add("202220/");
+        String directoryPath = "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202220";
 
-        Semester s1 = new Semester(HistoricalEnrDirectories.get(0));
+        Semester s1 = new Semester(directoryPath);
         assertNotNull(s1.getPreRegDate(), "semester should have a pre-registration date.");
         assertEquals(s1.getPreRegDate(), "2022-10-31");
     }
