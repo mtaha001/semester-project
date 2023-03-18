@@ -66,7 +66,12 @@ class TestSemester {
 
     @Test
     void yieldsCorrectDates() {
+        ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
+        HistoricalEnrDirectories.add("202220/");
 
+        Semester s1 = new Semester(HistoricalEnrDirectories.get(0));
+        assertNotNull(s1.getPreRegDate(), "semester should have a pre-registration date.");
+        assertEquals(s1.getPreRegDate(), "2022-10-31");
     }
     // Add more tests regarding the Semester class below..
 }
