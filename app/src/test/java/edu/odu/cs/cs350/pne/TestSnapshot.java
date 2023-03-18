@@ -7,6 +7,7 @@ package edu.odu.cs.cs350.pne;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
 // import org.junit.jupiter.api.BeforeEach;
 
 
@@ -23,14 +24,23 @@ public class TestSnapshot {
     // public void setUp (){
     //     s1 =  new Snapshot();
     // }
+    private Snapshot snapshot1;
+    private Section section1;
+
+    @BeforeEach
+    public void setUp() {
+        snapshot1 = new Snapshot();
+    }
 
     @Test
     void testDefaultConstructor() {
 
-
-        Snapshot s1 = new Snapshot();
         // Ensure that the getSections() method returns an empty ArrayList
-        assertTrue(s1.getSections().isEmpty());
+        snapshot1 = new Snapshot();
+        ArrayList<Section> sections = snapshot1.getSections();
+        assertEquals(0, sections.size());
+        
+        
     }
 
 
