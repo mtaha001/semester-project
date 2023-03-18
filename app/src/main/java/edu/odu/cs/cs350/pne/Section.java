@@ -10,8 +10,8 @@ public class Section {
     private String CRSE;
     private int XLSTCAP;
     private int ENR;
-    private String LINK;
-    private String XLSTGROUP;
+    //private String LINK;
+    //private String XLSTGROUP;
     private int OVERALLCAP;
     private int OVERALLENR;
     //private int CRN;
@@ -25,9 +25,13 @@ public class Section {
 
     @CsvBindByName(column = "ENR")
 
+    @CsvBindByName(column = "LINK")
+    private String LINK;
+
     @CsvBindByName(column = "XLSTCAP")
 
     @CsvBindByName(column = "XLSTGROUP")
+    private String XLSTGROUP;
 
     @CsvBindByName(column = "OVERALL CAP")
 
