@@ -21,7 +21,9 @@ public class TestSnapshot {
 
     @BeforeEach
     public void setUp() {
+
         snapshot1 = new Snapshot();
+        
     }
 
     @Test
