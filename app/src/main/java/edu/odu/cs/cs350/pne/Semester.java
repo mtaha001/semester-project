@@ -13,6 +13,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class Semester {
@@ -41,8 +43,13 @@ public class Semester {
 
         directoryLocation = directoryLoc;
 
-        // Code will be the same as directory name but without slashes.
-        code = directoryLoc.replaceAll("[/\\\\]", "");
+        // Convert the directory string to a valid path string
+        Path path = Paths.get(directoryLocation);
+        directoryLocation = path.toString();
+        System.out.println(directoryLocation);
+
+        // Code will be the name of the last folder in the directory
+        code = path.getFileName().toString();
 
         // Extract semester's year from its code (first 4 chars) and convert to int:
         year = Integer.parseInt(code.substring(0, 4));
@@ -63,34 +70,27 @@ public class Semester {
                 break;
         }
 
-        // Create a File object representing the directory
-        File directory = new File(directoryLocation);
-
         // Create a File object representing the dates.txt file
-        File file = new File(directory, "dates.txt");
+        File file = new File(directoryLocation, "dates.txt");
 
-        try {
-            // Create a FileReader object to read the file
-            FileReader fileReader = new FileReader(file);
+        // Create a FileReader object to read the file
+        FileReader fileReader = new FileReader(file);
 
-            // Create a BufferedReader object to read the file line by line
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
+        // Create a BufferedReader object to read the file line by line
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-            // Read the file line by line
-            String line;
+        // Read both lines of dates.txt file
+        String line;
+        line = bufferedReader.readLine();
+        preRegistrationDate = line; // read pre-registration date
 
-            // Read both lines of dates.txt file
-            line = bufferedReader.readLine();
-            preRegistrationDate = line; // read pre-registration date
+        // line = bufferedReader.readLine();
 
-            line = bufferedReader.readLine();
+        // Close the BufferedReader
+        bufferedReader.close();
 
-            // Close the BufferedReader
-            bufferedReader.close();
-
-        } catch (FileNotFoundException e) {
+        if (!file.exists()) {
             throw new IOException("Missing dates.txt in semester code.");
-
         }
     }
 
