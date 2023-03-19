@@ -14,8 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
-public class TestSnapshot {
-    
+public class TestSnapshot { 
+
     private Snapshot snapshot1;
     
 
@@ -28,7 +28,6 @@ public class TestSnapshot {
     void testDefaultConstructorSnapshot() {
 
         // Ensure that the getSections() method returns an empty ArrayList
-        snapshot1 = new Snapshot();
         ArrayList<Section> sections = snapshot1.getSections();
         assertEquals(0, sections.size());
         
