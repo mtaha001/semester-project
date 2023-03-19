@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 class TestSemester {
@@ -15,15 +17,18 @@ class TestSemester {
         // Tests that the correct Semester codes and directoryLocations
         // are created for Semester objects
 
-        // List of directories will be read into an ArrayList.
+        // NOTE: I know that these semester directory paths are local and so the tests
+        // will only pass on my machine.
+        // I've been looking through the course lectures for guidance on how to use the
+        // test-data directories
+        // for these tests in a way that will work on any machine, but i can't find any.
+        // I tried using the relative paths to the semester directories, but that
+        // wouldn't work.
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
         HistoricalEnrDirectories.add(
                 "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202010");
         HistoricalEnrDirectories.add(
                 "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202120");
-
-        // new Semester obj should be created for each semester directory in the list.
-        // whether a driver or the Semester class itself should do this isn't known yet.
 
         // Semester should have a constructor that takes a directory as parameter
         Semester s1 = new Semester(HistoricalEnrDirectories.get(0));
@@ -80,5 +85,5 @@ class TestSemester {
         assertNotNull(s1.getPreRegDate(), "semester should have a pre-registration date.");
         assertEquals(s1.getPreRegDate(), "2022-10-31");
     }
-    // Add more tests regarding the Semester class below..
+
 }
