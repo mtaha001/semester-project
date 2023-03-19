@@ -14,18 +14,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
-public class TestSnapshot {
-    
+public class TestSnapshot { 
 
-    // private Snapshot s1; 
-    // private Snapshot s2; 
-
-    // @BeforeEach
-    // public void setUp (){
-    //     s1 =  new Snapshot();
-    // }
     private Snapshot snapshot1;
-    private Section section1;
+    
 
     @BeforeEach
     public void setUp() {
@@ -33,34 +25,45 @@ public class TestSnapshot {
     }
 
     @Test
-    void testDefaultConstructor() {
+    void testDefaultConstructorSnapshot() {
 
         // Ensure that the getSections() method returns an empty ArrayList
-        snapshot1 = new Snapshot();
         ArrayList<Section> sections = snapshot1.getSections();
         assertEquals(0, sections.size());
-        
         
     }
 
 
     @Test
-    public void testGetSections() {
-        // Create some Section objects
-        Section section1 = new Section("Section 1");
-        Section section2 = new Section("Section 2");
+    public void testGetSectionsOfSnapshot() {
 
-        // Create an ArrayList of Section objects
+        Section section1 = new Section();
+        Section section2 = new Section();
+        ArrayList<Section> sectionsOfSnapshot1 = snapshot1.getSections();
+        sectionsOfSnapshot1.add(section1);
+        sectionsOfSnapshot1.add(section2);
+        assertEquals(sectionsOfSnapshot1, snapshot1.getSections());
+
+    }
+
+    @Test
+    public void testSetSectionsOfSnapshot() {
+
         ArrayList<Section> sections = new ArrayList<>();
+        Section section1 = new Section();
+        Section section2 = new Section();
         sections.add(section1);
         sections.add(section2);
+        snapshot1.setSections(sections);
+        ArrayList<Section> sectionsOfSnapshot1 = snapshot1.getSections();
+        assertEquals(2, sectionsOfSnapshot1.size());
+        assertEquals(section1, sectionsOfSnapshot1.get(0));
+        assertEquals(section2, sectionsOfSnapshot1.get(1));
 
-        // Create a Snapshot object that holds the ArrayList of Section objects
-        Snapshot snapshot = new Snapshot(sections);
-
-        // Ensure that the getSections() method returns the correct ArrayList
-        assertEquals(sections, snapshot.getSections());
     }
+
+
+
 
 
     

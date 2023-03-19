@@ -28,6 +28,10 @@ public class Snapshot {
     public void setSections(ArrayList<Section> sections) {
         this.sections = sections;
     }
+
+    public void addSection(Section section) {
+        sections.add(section);
+    }
         
     
     
