@@ -40,24 +40,24 @@ public class TestSnapshot {
         ArrayList<Section> sections = snapshot1.getSections();
         assertEquals(0, sections.size());
         
-        
-        
     }
 
 
     @Test
     public void testGetSectionsOfSnapshot() {
-        // Create some Section objects
+
         Section section1 = new Section();
         Section section2 = new Section();
         ArrayList<Section> sectionsOfSnapshot1 = snapshot1.getSections();
         sectionsOfSnapshot1.add(section1);
         sectionsOfSnapshot1.add(section2);
         assertEquals(sectionsOfSnapshot1, snapshot1.getSections());
+
     }
 
     @Test
     public void testSetSectionsOfSnapshot() {
+
         ArrayList<Section> sections = new ArrayList<>();
         Section section1 = new Section();
         Section section2 = new Section();
@@ -68,6 +68,7 @@ public class TestSnapshot {
         assertEquals(2, sectionsOfSnapshot1.size());
         assertEquals(section1, sectionsOfSnapshot1.get(0));
         assertEquals(section2, sectionsOfSnapshot1.get(1));
+
     }
 
 
