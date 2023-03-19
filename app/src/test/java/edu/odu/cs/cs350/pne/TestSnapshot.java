@@ -16,14 +16,6 @@ import java.util.ArrayList;
 
 public class TestSnapshot {
     
-
-    // private Snapshot s1; 
-    // private Snapshot s2; 
-
-    // @BeforeEach
-    // public void setUp (){
-    //     s1 =  new Snapshot();
-    // }
     private Snapshot snapshot1;
     
 
