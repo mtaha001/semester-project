@@ -41,6 +41,27 @@ public class TestDetailedProjectionReport {
         assertEquals(DetailedReport1.getFilePath(),"C:/tnguy039/OutPut");
     }
 
+    @Test
+    void testCreateReportFile() throws IOException {
+
+        // Set up test variables
+        String expectedContent = "This is the detailed projection report file.";
+        String fileLocation = "test_report.txt";
+
+        // Call the main method of DetailedProjectionReport class
+        DetailedProjectionReport.main(new String[]{fileLocation});
+
+        // Assert that the file was created with the expected content
+        assertTrue(Files.exists(Paths.get(fileLocation)));
+        BufferedReader reader = new BufferedReader(new FileReader(fileLocation));
+        String actualContent = reader.readLine();
+        reader.close();
+        assertEquals(expectedContent, actualContent);
+
+        // Delete the test file
+        Files.deleteIfExists(Paths.get(fileLocation));
+    }
+
     
 
 
