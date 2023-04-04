@@ -35,6 +35,19 @@ public class DetailedProjectionReport {
     }
 
     
+    public static void main(String[] args) {
+
+        // Check if the user has provided the file location
+        if (args.length == 0) {
+            System.out.println("Please provide the file location.");
+            return;
+        }
+
+        // Get the file location from the command line argument
+        String fileLocation = args[0];
+        
+    }
+    
 
 
 
