@@ -33,6 +33,10 @@ dependencies {
 
     //used open csv to import file
     implementation 'com.opencsv:opencsv:5.1'
+
+    //used Apache POI for excel file
+    implementation 'org.apache.poi:poi:5.2.0'
+
 }
 
 application {

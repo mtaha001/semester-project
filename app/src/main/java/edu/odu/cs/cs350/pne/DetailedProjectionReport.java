@@ -20,6 +20,7 @@ public class DetailedProjectionReport {
     public DetailedProjectionReport()
     {
         this.filePath ="";
+        
     }
 
     /**
