@@ -37,6 +37,9 @@ dependencies {
     //used Apache POI for excel file
     implementation 'org.apache.poi:poi:5.2.0'
 
+    //Add the Apache POI XSSF dependency
+    implementation 'org.apache.poi:poi-ooxml:5.1.0'
+
 }
 
 application {
