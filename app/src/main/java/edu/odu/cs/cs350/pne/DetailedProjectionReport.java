@@ -5,6 +5,8 @@ import java.io.Console;
 import java.io.IOException;
 import java.io.*;
 import java.io.FileOutputStream;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 
@@ -35,18 +37,9 @@ public class DetailedProjectionReport {
     }
 
     
-    public static void main(String[] args) {
 
-        // Check if the user has provided the file location
-        if (args.length == 0) {
-            System.out.println("Please provide the file location.");
-            return;
-        }
-
-        // Get the file location from the command line argument
-        String fileLocation = args[0];
-        
-    }
+    
+   
     
 
 
