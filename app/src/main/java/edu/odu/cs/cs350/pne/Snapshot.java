@@ -13,22 +13,27 @@ import java.time.LocalDateTime;
 
 public class Snapshot {
 
+    // ArrayList to hold the sections in this snapshot
     private ArrayList<Section> sections;
+
     private LocalDate date;
 
-    
+    // Constructor to initialize the ArrayList
     public Snapshot() {
         sections = new ArrayList<>();
     }
 
+    // Getter for the ArrayList of sections
     public ArrayList<Section> getSections() {
         return sections;
     }
 
+    // Setter for the ArrayList of sections
     public void setSections(ArrayList<Section> sections) {
         this.sections = sections;
     }
 
+    // Method to add a section to the ArrayList
     public void addSection(Section section) {
         sections.add(section);
     }
