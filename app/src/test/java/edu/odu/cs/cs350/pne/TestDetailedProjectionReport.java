@@ -31,14 +31,14 @@ public class TestDetailedProjectionReport {
 
 
     @Test
-    public void TestDetailedProjectionReportDefaultConstructor()
+    public void testDetailedProjectionReportDefaultConstructor()
     {
         assertEquals(DetailedReport1.getFilePath(), "");
 
     }
   
     @Test
-    public void TestSetFilePath()
+    public void testSetFilePath()
     {
         assertEquals(DetailedReport1.getFilePath(),"");
         DetailedReport1.setFilePath(outPath);
