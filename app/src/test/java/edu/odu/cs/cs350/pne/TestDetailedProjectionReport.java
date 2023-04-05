@@ -48,20 +48,25 @@ public class TestDetailedProjectionReport {
     @Test
     public void testCreateWorkbook() throws Exception {
         String filePath = "C:/path/to/test_workbook.xlsx";
+        Path path = Paths.get(filePath);
+        
+        // Create any necessary directories
+        Files.createDirectories(path.getParent());
+        
+        // Create the file
+        Files.createFile(path);
         
         // Create a new Excel workbook
         Workbook workbook = new XSSFWorkbook();
         
-        // Write the workbook to a file
+        // Write the workbook to the file
         FileOutputStream outputStream = new FileOutputStream(new File(filePath));
         workbook.write(outputStream);
         outputStream.close();
-                
-        // Check that the file was created
+        
+        // Check that the file was created and is not empty
         File file = new File(filePath);
         assertTrue(file.exists());
-        
-        // Check that the file is not empty
         assertTrue(file.length() > 0);
         
         // Delete the file
