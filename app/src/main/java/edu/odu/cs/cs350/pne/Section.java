@@ -126,5 +126,10 @@ public class Section {
         return CRN;
     }
 
+    public void setSUBJ(String subj) {
+        this.SUBJ = subj;
+    }
+    
+
 }
 
