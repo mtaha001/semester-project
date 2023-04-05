@@ -12,9 +12,13 @@ import java.util.ArrayList;
 public class TestSection {
 
     @Test
-    void TestReadSUBJ() { //test if SUBJ is read in correctly from spreadsheet
-        Section s1 = new Section();
+    public void testGetSUBJ() {
+        Section section = new Section();
+        section.setSUBJ("CS");
+        assertEquals("CS", section.getSUBJ());
     }
+    
+
     
 }
 
