@@ -22,4 +22,41 @@ public class Offering {
     @CsvBindByName(column = "OVERALL CAP")
     private String OVERALLCAP; //overall capacity
 
+    
+    /**
+     * getINSTRUCTOR()
+     * 
+     * @return the INSTRUCTOR
+     */
+    public String getINSTRUCTOR() {
+        return INSTRUCTOR;
+    }
+
+    /**
+     * getCRSE()
+     * 
+     * @return the CRSE
+     */
+    public String getCRSE(){
+        return CRSE;
+    }
+
+    /**
+     * getOVERALLENR()
+     * 
+     * @return the OVERALLENR
+     */
+    public String getOVERALLENR(){
+        return OVERALLENR;
+    }
+
+    /**
+     * getOVERALLCAP()
+     * 
+     * @return the OVERALLCAP
+     */
+    public String getOVERALLCAP(){
+        return OVERALLCAP;
+    }
+
 }
