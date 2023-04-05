@@ -18,10 +18,13 @@ public class Section {
     
 
     @CsvBindByName(column = "CRN")
-    private String CRN;
+    private int CRN;
 
     @CsvBindByName(column = "SUBJ")
     private String SUBJ;
+
+     @CsvBindByName(column = "CRSE")
+    private String CRSE;
 
     @CsvBindByName(column = "ENR")
     private int ENR;
@@ -41,8 +44,16 @@ public class Section {
     // @CsvBindByName(column = "OVERALL ENR")
     // private int OVERALLENR;
 
-    @CsvBindByName(column = "CRSE")
-    private String CRSE;
+   
+
+    /**
+     * getCRN()
+     * 
+     * @return the CRN
+     */
+    public int getCRN() {
+        return CRN;
+    }
 
 
     /**
@@ -63,14 +74,6 @@ public class Section {
         return CRSE;
     }
 
-    /**
-     * getXLSTCAP()
-     * 
-     * @return the crosslist cap
-     */
-    public int getXLSTCAP() {
-        return XLSTCAP;
-    }
 
     /**
      * getENR()
@@ -88,6 +91,15 @@ public class Section {
      */
     public String getLINK() {
         return LINK;
+    }
+
+     /**
+     * getXLSTCAP()
+     * 
+     * @return the crosslist cap
+     */
+    public int getXLSTCAP() {
+        return XLSTCAP;
     }
 
     /**
@@ -117,14 +129,8 @@ public class Section {
     //     return OVERALLENR;
     // }
 
-    /**
-     * getCRN()
-     * 
-     * @return the CRN
-     */
-    public String getCRN() {
-        return CRN;
-    }
+    
+   
 
     public void setSUBJ(String subj) {
         this.SUBJ = subj;
