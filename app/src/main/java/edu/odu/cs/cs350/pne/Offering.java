@@ -59,4 +59,21 @@ public class Offering {
         return OVERALLCAP;
     }
 
+
+    public void setINSTRUCTOR(String instructor) {
+        this.INSTRUCTOR = instructor;
+    }
+
+    public void setCRSE(String crse){
+        this.CRSE = crse;
+    }
+
+    public void setOVERALLENR(String overallenr){
+        this.OVERALLENR = overallenr;
+    }
+
+    public void setOVERALLCAP(String overallcap){
+        this.OVERALLCAP = overallcap;
+    }
+
 }
