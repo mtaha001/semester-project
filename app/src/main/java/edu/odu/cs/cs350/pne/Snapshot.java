@@ -16,7 +16,7 @@ public class Snapshot {
     private ArrayList<Section> sections;
     private LocalDate date;
 
-
+    
     public Snapshot() {
         sections = new ArrayList<>();
     }

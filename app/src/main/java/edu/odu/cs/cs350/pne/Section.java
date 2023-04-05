@@ -129,11 +129,29 @@ public class Section {
     //     return OVERALLENR;
     // }
 
-    
+    public void setCRN(int crn) {
+        this.CRN = crn;
+    }
    
-
     public void setSUBJ(String subj) {
         this.SUBJ = subj;
+    }
+
+    public void setCRSE(String crse){
+        this.CRSE = crse;
+    }
+
+    public void setENR(int enr){
+        this.ENR = enr;
+    }
+
+    public void setXLSTCAP(int xlstcap){
+        this.XLSTCAP = xlstcap;
+    }
+
+    public void setXLSTGROUP(String xlstgroup)
+    {
+        this.XLSTGROUP = xlstgroup;
     }
     
 
