@@ -10,6 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 
+
 public class DetailedProjectionReport {
     private InputStream fileIn;
     private FileOutputStream fileOut; 
@@ -20,8 +21,9 @@ public class DetailedProjectionReport {
     public DetailedProjectionReport()
     {
         this.filePath ="";
-        
+         
     }
+    
 
     /**
      * getFilePath()
