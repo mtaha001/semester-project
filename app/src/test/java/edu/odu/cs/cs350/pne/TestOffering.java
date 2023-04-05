@@ -8,12 +8,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
-
+import org.junit.jupiter.api.BeforeEach;
 public class TestOffering {
 
     private Offering offering;
     
-    @Before
+    @BeforeEach
     public void setUp() {
         offering = new Offering();
     }

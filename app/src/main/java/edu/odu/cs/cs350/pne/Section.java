@@ -6,15 +6,15 @@ import com.opencsv.bean.CsvBindByName;
 
 public class Section {
 
-    //private String SUBJ;
-    private String CRSE;
-    private int XLSTCAP;
-    private int ENR;
-    //private String LINK;
-    //private String XLSTGROUP;
-    private int OVERALLCAP;
-    private int OVERALLENR;
-    //private int CRN;
+    // private String SUBJ;
+    // private String CRSE;
+    // private int XLSTCAP;
+    // private int ENR;
+    // private String LINK;
+    // private String XLSTGROUP;
+    // private int OVERALLCAP;
+    // private int OVERALLENR;
+    // private int CRN;
     
 
     @CsvBindByName(column = "CRN")
@@ -24,18 +24,26 @@ public class Section {
     private String SUBJ;
 
     @CsvBindByName(column = "ENR")
+    private int ENR;
 
     @CsvBindByName(column = "LINK")
     private String LINK;
 
     @CsvBindByName(column = "XLSTCAP")
+    private int XLSTCAP;
 
     @CsvBindByName(column = "XLSTGROUP")
     private String XLSTGROUP;
 
-    @CsvBindByName(column = "OVERALL CAP")
+    // @CsvBindByName(column = "OVERALL CAP")
+    // private int OVERALLCAP;
 
-    @CsvBindByName(column = "OVERALL ENR")
+    // @CsvBindByName(column = "OVERALL ENR")
+    // private int OVERALLENR;
+
+    @CsvBindByName(column = "CRSE")
+    private String CRSE;
+
 
     /**
      * getSUBJ()
@@ -96,25 +104,25 @@ public class Section {
      * 
      * @return overall capacity
      */
-    public int getOVERALLCAP() {
-        return OVERALLCAP;
-    }
+    // public int getOVERALLCAP() {
+    //     return OVERALLCAP;
+    // }
     
     /**
      * getOVERALLENR()
      * 
      * @return enrolled
      */
-    public int getOVERALLENR() {
-        return OVERALLENR;
-    }
+    // public int getOVERALLENR() {
+    //     return OVERALLENR;
+    // }
 
     /**
      * getCRN()
      * 
      * @return the CRN
      */
-    public int getCRN() {
+    public String getCRN() {
         return CRN;
     }
 
