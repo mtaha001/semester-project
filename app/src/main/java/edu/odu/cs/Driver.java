@@ -6,24 +6,26 @@ import edu.odu.cs.cs350.pne.Semester;
 public class Driver {
     public static void main(String[] args) {
 
-        if (validateParameters(args) == false)
+        if (minParametersMet(args) == false)
             return;
 
         for (int i = 0; i < args.length; i++) {
-
             if (isSemesterDirectory(args[i].toString()) == true) {
 
             }
-
         }
+
     }
 
     /**
      * Validates that the minimum number of required parameters are met.
      * 
-     * @param args
+     * @param args the array of parameters that were passed with exec
+     * @return true if enough parameters were provided to successfully run the
+     *         program
+     * @return false otherwise
      **/
-    private static boolean validateParameters(String[] args) {
+    private static boolean minParametersMet(String[] args) {
         if (args.length < 3) {
             System.err.println("Missing arguments. Please provide the following: \n" +
                     "1. One or more semester directory locations of historical data.\n" +
@@ -43,7 +45,6 @@ public class Driver {
      * a Semester directory.
      * 
      * @return true if the argument is a Semester Directory
-     * 
      * @return false if the argument is not a Semester Directory
      **/
     static boolean isSemesterDirectory(String argument) {
@@ -59,7 +60,6 @@ public class Driver {
      * projection is desired.
      * 
      * @return true if the argument is part of Historical directory list
-     * 
      * @return false if the argument is not
      **/
     boolean isHistoricalSemester() {
