@@ -71,12 +71,19 @@ public class TestDetailedProjectionReport {
         
         // Delete the file
         file.delete();
+
+        // Check the workbook created was save to path
+        try (FileOutputStream fileOut = new FileOutputStream(filePath)) {
+            workbook.write(fileOut);
+            assertTrue(new File(filePath).exists());
+        }
+
     }
 
-   
-
+    
     
 
+   
 
 
     
