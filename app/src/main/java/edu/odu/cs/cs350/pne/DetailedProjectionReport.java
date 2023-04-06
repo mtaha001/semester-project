@@ -48,6 +48,22 @@ public class DetailedProjectionReport {
         // Create a new Excel workbook
         Workbook workbook = new XSSFWorkbook(); 
 
+         // Save the workbook to the specified file path
+        try (FileOutputStream fileOut = new FileOutputStream(filePath)) {
+            workbook.write(fileOut);
+            System.out.println("Detailed Projection Report saved successfully to: " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            // Close the workbook
+            try {
+                workbook.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
        
            
     }
