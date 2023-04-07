@@ -47,21 +47,23 @@ public class TestDetailedProjectionReport {
         assertEquals(DetailedReport1.getFilePath(),"C:/tnguy039/OutPut");
     }
 
-
     @Test
     void testOutputviaCLI_Success() throws IOException, InvalidFormatException {
-        try {
-            DetailedReport1.CreateWorkbookThroughCLI("src/test/reports");
-        } catch (Exception e) {
-            assertEquals(0, 0, "Exception thrown: " + e.getMessage());
-        }
-        File file = new File("src/test/reports/report.xlsx");
-        assertEquals(DetailedReport1.getFilePath(), "");
-        assertTrue(file.exists());
-    }
+    // Execute the method under test and capture any exceptions
+    assertDoesNotThrow(() -> DetailedReport1.CreateWorkbookThroughCLI("src/test/reports"));
+
+    // Verify that the expected file was created
+    File file = new File("src/test/reports/report.xlsx");
+    assertTrue(file.exists(), "Expected file not found: " + file.getAbsolutePath());
+
+    // Verify that the file path was set correctly
+    assertEquals(DetailedReport1.getFilePath(), "");
+    assertTrue(file.exists());
+}
 
 
     
+
 
 }
 
