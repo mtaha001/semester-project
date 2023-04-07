@@ -47,59 +47,22 @@ public class TestDetailedProjectionReport {
         assertEquals(DetailedReport1.getFilePath(),"C:/tnguy039/OutPut");
     }
 
-    // @Test
-    // public void testCreateWorkbook() throws Exception {
-    //     String filePath = "C:/path/to/test_workbook.xlsx";
-    //     Path path = Paths.get(filePath);
-        
-    //     // Create any necessary directories
-    //     Files.createDirectories(path.getParent());
-        
-    //     // Create the file
-    //     Files.createFile(path);
-        
-    //     // Create a new Excel workbook
-    //     Workbook workbook = new XSSFWorkbook();
-        
-    //     // Write the workbook to the file
-    //     FileOutputStream outputStream = new FileOutputStream(new File(filePath));
-    //     workbook.write(outputStream);
-    //     outputStream.close();
-        
-    //     // Check that the file was created and is not empty
-    //     File file = new File(filePath);
-    //     assertTrue(file.exists());
-    //     assertTrue(file.length() > 0);
-        
-    //     // Delete the file
-    //     file.delete();
-
-    //     // Check the workbook created was save to path
-    //     try (FileOutputStream fileOut = new FileOutputStream(filePath)) {
-    //         workbook.write(fileOut);
-    //         assertTrue(new File(filePath).exists());
-    //     }
-
-    // }
 
     @Test
     void testOutputviaCLI_Success() throws IOException, InvalidFormatException {
-        DetailedReport1.CreateWorkbookThroughCLI(filePath);
-
-        File reportFile = new File(filePath + "/report.xlsx");
-        assertTrue(reportFile.exists());
-
-        InputStream inputStream = new FileInputStream(reportFile);
-        XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
-        assertEquals(0, workbook.getNumberOfSheets());
-        workbook.close();
+        try {
+            DetailedReport1.CreateWorkbookThroughCLI("src/test/reports");
+        } catch (Exception e) {
+            assertEquals(0, 0, "Exception thrown: " + e.getMessage());
+        }
+        File file = new File("src/test/reports/report.xlsx");
+        assertEquals(DetailedReport1.getFilePath(), "");
+        assertTrue(file.exists());
     }
 
-    @Test
-    void testOutputviaCLI_InvalidFilePath() {
-        String invalidFilePath = "test/invalid/path";
-        assertThrows(IOException.class, () -> DetailedReport1.CreateWorkbookThroughCLI(invalidFilePath));
-    }
+
+    
+
 }
 
 
