@@ -64,9 +64,10 @@ public class Driver {
      * @return true if the argument is a Semester Directory
      * @return false if the argument is not a Semester Directory
      **/
-    static boolean isSemesterDirectory(String argument) {
-
-        return true;
+    static boolean isSemesterDirectory(String s) {
+        return s.substring(s.length() + 1, s.length() - 2).contains("10") ||
+                s.substring(s.length() + 1, s.length() - 2).contains("20") ||
+                s.substring(s.length() + 1, s.length() - 2).contains("30");
     }
 
     /**
