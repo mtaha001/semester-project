@@ -28,7 +28,7 @@ public class Semester {
     private ArrayList<Snapshot> snapshots;
     private ArrayList<Offering> offerings;
 
-    /**
+    /*
      * Construct a Semester object
      * 
      * @param directoryLoc - String representing the directory

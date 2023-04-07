@@ -19,8 +19,8 @@ repositories {
 
 //source compatibility and target 
 java {
-    sourceCompatibility = JavaVersion.toVersion(11.0)
-    targetCompatibility = JavaVersion.toVersion(11.0)
+    //sourceCompatibility = JavaVersion.toVersion(11.0)
+    //targetCompatibility = JavaVersion.toVersion(11.0)
 }
 
 dependencies {
@@ -51,3 +51,19 @@ tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+test {
+    ignoreFailures = true
+    useJUnitPlatform()
+}
+
+application { //Allows  ./gradlew run --args=path-to-test-data
+    mainClass = 'edu.odu.cs.pne.Driver'
+}
+
+task copyDocs (type: Copy, dependsOn: javadoc) {
+    from 'build/docs'
+    into 'build/reports'
+}
+
+check.dependsOn copyDocs

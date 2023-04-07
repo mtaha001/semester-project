@@ -46,7 +46,7 @@ public class Section {
 
    
 
-    /**
+    /*
      * getCRN()
      * 
      * @return the CRN
@@ -56,7 +56,7 @@ public class Section {
     }
 
 
-    /**
+    /*
      * getSUBJ()
      * 
      * @return the subject
@@ -65,7 +65,7 @@ public class Section {
         return SUBJ;
     }
 
-    /**
+    /*
      * getCRSE()
      * 
      * @return the course
@@ -75,7 +75,7 @@ public class Section {
     }
 
 
-    /**
+    /*
      * getENR()
      * 
      * @return enrolled
@@ -84,7 +84,7 @@ public class Section {
         return ENR;
     }
     
-    /**
+    /*
      * getLINK()
      * 
      * @return linked
@@ -93,7 +93,7 @@ public class Section {
         return LINK;
     }
 
-     /**
+     /*
      * getXLSTCAP()
      * 
      * @return the crosslist cap
@@ -102,7 +102,7 @@ public class Section {
         return XLSTCAP;
     }
 
-    /**
+    /*
      * getXLSTGROUP()
      * 
      * @return grouped crosslisted
@@ -111,7 +111,7 @@ public class Section {
         return XLSTGROUP;
     }
     
-    /**
+    /*
      * getOVERALLCAP()
      * 
      * @return overall capacity
@@ -120,7 +120,7 @@ public class Section {
     //     return OVERALLCAP;
     // }
     
-    /**
+    /*
      * getOVERALLENR()
      * 
      * @return enrolled
