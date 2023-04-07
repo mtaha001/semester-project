@@ -1,9 +1,8 @@
-package edu.odu.cs;
+package edu.odu.cs.cs350.pne;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import edu.odu.cs.cs350.pne.Semester;
 
 public class Driver {
     public static void main(String[] args) throws IOException {
