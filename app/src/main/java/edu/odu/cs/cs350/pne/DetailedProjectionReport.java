@@ -24,7 +24,6 @@ public class DetailedProjectionReport {
     public DetailedProjectionReport()
     {
         this.filePath ="";
-         
     }
     
     
@@ -43,7 +42,8 @@ public class DetailedProjectionReport {
         this.filePath = newFilePath;
     }
 
-    
+
+        
 
     
 
