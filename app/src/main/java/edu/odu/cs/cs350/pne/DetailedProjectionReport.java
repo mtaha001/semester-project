@@ -41,6 +41,29 @@ public class DetailedProjectionReport {
     public void setFilePath(String newFilePath){
         this.filePath = newFilePath;
     }
+    
+    public void CreateWorkbookThroughCLI(String filePath) throws IOException, InvalidFormatException {
+        // Create directory if it doesn't exist
+        new File(filePath).mkdirs();
+    
+        // Create output file
+        File outputFile = new File(filePath + "/report.xlsx");
+        if (outputFile.createNewFile()) {
+            // File was created successfully
+        } else {
+            // File already exists, overwrite it
+        }
+
+        //Reads the template file "template.xlsx" and creates a new XSSFWorkbook object from the template file and writes it to the output file
+        try (InputStream templateStream = new FileInputStream("data/template.xlsx");
+         OutputStream fileout = new FileOutputStream(outputFile);
+         XSSFWorkbook wb = new XSSFWorkbook(templateStream)) {
+        wb.write(fileout);
+        } catch (IOException e) {
+            System.err.println("Error occurred when creating file " + filePath + "/report.xlsx");
+        }
+    }
+    
 
 
         
