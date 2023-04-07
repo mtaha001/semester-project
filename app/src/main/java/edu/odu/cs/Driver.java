@@ -1,18 +1,35 @@
 package edu.odu.cs;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import edu.odu.cs.cs350.pne.Semester;
 
 public class Driver {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
+        // Don't continue if there aren't enough arguments provided
         if (minParametersMet(args) == false)
             return;
 
+        ArrayList<Semester> historicalSemesterList = new ArrayList<Semester>();
+
+        // Loop through the provided parameters and initialize the correct
+        // variable for each argument
         for (int i = 0; i < args.length; i++) {
             if (isSemesterDirectory(args[i].toString()) == true) {
+                Semester s = new Semester(args[i].toString());
 
+                if (isHistoricalSemester(args[i].toString()) == true) {
+                    historicalSemesterList.add(s);
+                }
             }
+
+            else {
+                String DPRPath = args[i].toString();
+            }
+
+            String optionalDate = args[i].toString();
         }
 
     }
@@ -62,7 +79,7 @@ public class Driver {
      * @return true if the argument is part of Historical directory list
      * @return false if the argument is not
      **/
-    boolean isHistoricalSemester() {
+    static boolean isHistoricalSemester(String argument) {
         return true;
     }
 }
