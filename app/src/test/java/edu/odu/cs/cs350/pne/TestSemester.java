@@ -6,12 +6,21 @@ package edu.odu.cs.cs350.pne;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+
+
 class TestSemester {
+
+        
     @Test
     void yieldsCorrectDirAndCode() throws IOException {
         // Tests that the correct Semester codes and directoryLocations
@@ -24,24 +33,26 @@ class TestSemester {
         // for these tests in a way that will work on any machine, but i can't find any.
         // I tried using the relative paths to the semester directories, but that
         // wouldn't work.
+        String s1Dir = "src\\test\\data\\202010";
+        Path s1DataPath = Path.of(System.getProperty("user.dir"), s1Dir);
+
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
-        HistoricalEnrDirectories.add(
-                "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202010");
-        HistoricalEnrDirectories.add(
-                "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202120");
+        HistoricalEnrDirectories.add(s1DataPath.toString());
+
+        String s2Dir = "src\\test\\data\\202120";
+        Path s2DataPath = Path.of(System.getProperty("user.dir"), s2Dir);
+        HistoricalEnrDirectories.add(s2DataPath.toString());
 
         // Semester should have a constructor that takes a directory as parameter
         Semester s1 = new Semester(HistoricalEnrDirectories.get(0));
         assertNotNull(s1.getDirLoc(), "semester should have a directory location");
-        assertEquals(s1.getDirLoc(),
-                "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202010");
+        assertEquals(s1.getDirLoc(),s1DataPath.toString());
         assertNotNull(s1.getCode(), "semester should have a code");
         assertEquals(s1.getCode(), "202010");
 
         Semester s2 = new Semester(HistoricalEnrDirectories.get(1));
         assertNotNull(s2.getDirLoc(), "semester should have a directory location");
-        assertEquals(s2.getDirLoc(),
-                "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202120");
+        assertEquals(s2.getDirLoc(),s2DataPath.toString());
         assertNotNull(s2.getCode(), "semester should have a code");
         assertEquals(s2.getCode(), "202120");
 
@@ -49,13 +60,21 @@ class TestSemester {
 
     @Test
     void yieldsCorrectYearAndSeason() throws IOException {
+
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
-        HistoricalEnrDirectories.add(
-                "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202010");
-        HistoricalEnrDirectories.add(
-                "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202120");
-        HistoricalEnrDirectories.add(
-                "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202230");
+
+        String s1Dir = "src\\test\\data\\202010";
+        Path s1DataPath = Path.of(System.getProperty("user.dir"), s1Dir);
+        HistoricalEnrDirectories.add(s1DataPath.toString());
+
+
+        String s2Dir = "src\\test\\data\\202120";
+        Path s2DataPath = Path.of(System.getProperty("user.dir"), s2Dir);
+        HistoricalEnrDirectories.add(s2DataPath.toString());
+
+        String s3Dir = "src\\test\\data\\202230";
+        Path s3DataPath = Path.of(System.getProperty("user.dir"), s3Dir);
+        HistoricalEnrDirectories.add(s3DataPath.toString());
 
         Semester s1 = new Semester(HistoricalEnrDirectories.get(0));
         assertNotNull(s1.getYear(), "semester should have an associated year");
@@ -79,7 +98,9 @@ class TestSemester {
 
     @Test
     void yieldsCorrectDates() throws IOException {
-        String directoryPath = "C:\\Users\\izsnu\\OneDrive\\Documents\\ODU\\CS_350\\ENROLLMENTPROJECT\\semester-project\\app\\src\\test\\data\\202220";
+        String s1Dir = "src\\test\\data\\202220";
+        Path s1DataPath = Path.of(System.getProperty("user.dir"), s1Dir);
+        String directoryPath = s1DataPath.toString();
 
         Semester s1 = new Semester(directoryPath);
         assertNotNull(s1.getPreRegDate(), "semester should have a pre-registration date.");
