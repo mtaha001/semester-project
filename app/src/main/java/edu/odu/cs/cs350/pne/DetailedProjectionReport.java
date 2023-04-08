@@ -26,8 +26,6 @@ public class DetailedProjectionReport {
         this.filePath ="";
     }
     
-    
-
     /**
      * getFilePath()
      * 
