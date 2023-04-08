@@ -11,6 +11,10 @@ public class Driver {
         if (minParametersMet(args) == false)
             return;
 
+        //Determine if the optional Date was given as a parameter
+        boolean dateWasGiven = (args[args.length - 1]).contains("/") || args[args.length - 1].contains("\\");
+
+    
         ArrayList<Semester> historicalSemesterList = new ArrayList<Semester>();
 
         // Loop through the provided parameters and initialize the correct
@@ -19,7 +23,17 @@ public class Driver {
             if (isSemesterDirectory(args[i].toString()) == true) {
                 Semester s = new Semester(args[i].toString());
 
-                if (isHistoricalSemester(args[i].toString()) == true) {
+                //If there is a date in args, the historical semester directories are any 
+                //args[] element that comes before the DPR path and the date
+                if (dateWasGiven == true) {
+                    if(i < args.length - 2)
+                        historicalSemesterList.add(s);
+                }
+
+                //if there is no date in args, the historical directories are any
+                //args[] element that comes before the DPR path
+                else{
+                    if(i < args.length - 1)
                     historicalSemesterList.add(s);
                 }
             }
@@ -67,20 +81,6 @@ public class Driver {
         return s.substring(s.length() + 1, s.length() - 2).contains("10") ||
                 s.substring(s.length() + 1, s.length() - 2).contains("20") ||
                 s.substring(s.length() + 1, s.length() - 2).contains("30");
-    }
-
-    /**
-     * Computes whether or not a command argument is
-     * a part of the Historical directory list, or
-     * if it is the directory location that
-     * indicates the enrollment data for the semester which a
-     * projection is desired.
-     * 
-     * @return true if the argument is part of Historical directory list
-     * @return false if the argument is not
-     **/
-    static boolean isHistoricalSemester(String argument) {
-        return true;
     }
 }
 
