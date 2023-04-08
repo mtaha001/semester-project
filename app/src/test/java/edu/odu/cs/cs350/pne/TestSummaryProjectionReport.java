@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestSummaryProjectionReport {
 
-    //@Test
+    
     @Test
     public void testCalcPercentElapsed() {
         // Set up test data
