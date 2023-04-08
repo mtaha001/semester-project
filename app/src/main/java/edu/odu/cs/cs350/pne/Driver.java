@@ -14,7 +14,6 @@ public class Driver {
         //Determine if the optional Date was given as a parameter
         boolean dateWasGiven = (args[args.length - 1]).contains("/") || args[args.length - 1].contains("\\");
 
-    
         ArrayList<Semester> historicalSemesterList = new ArrayList<Semester>();
 
         // Loop through the provided parameters and initialize the correct
@@ -30,7 +29,7 @@ public class Driver {
                         historicalSemesterList.add(s);
                 }
 
-                //if there is no date in args, the historical directories are any
+                //if there is no date, the historical directories are any
                 //args[] element that comes before the DPR path
                 else{
                     if(i < args.length - 1)
