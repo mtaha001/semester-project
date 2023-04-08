@@ -24,6 +24,7 @@ public class TestDetailedProjectionReport {
     public String filePath ;
     public String outPath; 
 
+    //Set up
     @BeforeEach 
     public void setUp() throws Exception{
         DetailedReport1 = new DetailedProjectionReport();
@@ -31,14 +32,15 @@ public class TestDetailedProjectionReport {
         filePath = "test/reports";
     }
 
-
+    //Test default constructor for DPR
     @Test
     public void testDetailedProjectionReportDefaultConstructor()
     {
         assertEquals(DetailedReport1.getFilePath(), "");
 
     }
-  
+    
+    //Test setter for filepath
     @Test
     public void testSetFilePath()
     {
