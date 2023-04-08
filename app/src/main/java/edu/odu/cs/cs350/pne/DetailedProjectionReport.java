@@ -26,8 +26,6 @@ public class DetailedProjectionReport {
         this.filePath ="";
     }
     
-    
-
     /**
      * getFilePath()
      * 
@@ -55,7 +53,7 @@ public class DetailedProjectionReport {
         }
 
         //Reads the template file "template.xlsx" and creates a new XSSFWorkbook object from the template file and writes it to the output file
-        try (InputStream templateStream = new FileInputStream("data/template.xlsx");
+        try (InputStream templateStream = DetailedProjectionReport.class.getResourceAsStream("/template.xlsx");
          OutputStream fileout = new FileOutputStream(outputFile);
          XSSFWorkbook wb = new XSSFWorkbook(templateStream)) {
         wb.write(fileout);
