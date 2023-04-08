@@ -13,7 +13,7 @@ public class SummaryProjectionReport {
 
         long totalDays = ChronoUnit.DAYS.between(startDate, endDate);
         long elapsedDays = ChronoUnit.DAYS.between(startDate, snapDate);
-        double percentElapsed = (double) elapsedDays / totalDays * 100; //placeholder
+        double percentElapsed = (double) elapsedDays / (double) totalDays * 100; //placeholder
         return percentElapsed;
     }
 
