@@ -40,6 +40,14 @@ public class DetailedProjectionReport {
         this.filePath = newFilePath;
     }
     
+    /*
+     * Create a workbook through command line
+     * 
+     * @param filePath - String representing the filepath for output
+     * to be written to
+     *                     
+     * @throws IOException, InvalidFormatException
+     */
     public void CreateWorkbookThroughCLI(String filePath) throws IOException, InvalidFormatException {
         // Create directory if it doesn't exist
         new File(filePath).mkdirs();
