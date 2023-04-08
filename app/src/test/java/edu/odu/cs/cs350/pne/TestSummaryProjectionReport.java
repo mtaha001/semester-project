@@ -28,7 +28,7 @@ public class TestSummaryProjectionReport {
         LocalDate startDate = LocalDate.of(2022, 1, 1);
         LocalDate endDate = LocalDate.of(2022, 1, 31);
         LocalDate snapDate = LocalDate.of(2022, 1, 15);
-        double expectedPercentElapsed = 50.0;
+        double expectedPercentElapsed = 46.67;
 
         // Call the method under test
         double actualPercentElapsed = SummaryProjectionReport.calcPercentElapsed(startDate, endDate, snapDate);
