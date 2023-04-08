@@ -11,7 +11,9 @@ public class SummaryProjectionReport {
         //endDate is the end of the enrollment period
         //snapDate is the day of the snapshot
 
-        double percentElapsed = 0; //placeholder
+        long totalDays = ChronoUnit.DAYS.between(startDate, endDate);
+        long elapsedDays = ChronoUnit.DAYS.between(startDate, snapDate);
+        double percentElapsed = (double) elapsedDays / totalDays * 100; //placeholder
         return percentElapsed;
     }
 
