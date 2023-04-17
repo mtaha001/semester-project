@@ -16,7 +16,7 @@ public class Snapshot {
     // ArrayList to hold the sections in this snapshot
     private ArrayList<Section> sections;
 
-    private LocalDate date;
+    private String date;
 
     // Constructor to initialize the ArrayList
     public Snapshot() {
@@ -37,6 +37,18 @@ public class Snapshot {
     public void addSection(Section section) {
         sections.add(section);
     }
+
+    // Setter for the date
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    // Getter for the date
+    public String getDate() {
+        return date;
+    }
+
+   
         
     
     

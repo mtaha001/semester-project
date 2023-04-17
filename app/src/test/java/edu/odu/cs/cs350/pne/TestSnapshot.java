@@ -64,6 +64,26 @@ public class TestSnapshot {
 
     }
 
+    @Test
+    public void testSetDate() {
+        // Create a new snapshot and set the date
+        String date = "2022-01-01";
+        snapshot1.setDate(date);
+
+        // Assert that the date was set correctly
+        assertEquals(date, snapshot1.getDate());
+    }
+
+    @Test
+    public void testGetDate() {
+        // Create a new snapshot and set the date
+        String date = "2022-01-01";
+        snapshot1.setDate(date);
+
+        // Assert that the getDate() method returns the expected date
+        assertEquals(date, snapshot1.getDate());
+    }
+
 
 
 
