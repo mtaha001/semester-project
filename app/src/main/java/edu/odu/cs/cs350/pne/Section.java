@@ -6,17 +6,6 @@ import com.opencsv.bean.CsvBindByName;
 
 public class Section {
 
-    // private String SUBJ;
-    // private String CRSE;
-    // private int XLSTCAP;
-    // private int ENR;
-    // private String LINK;
-    // private String XLSTGROUP;
-    // private int OVERALLCAP;
-    // private int OVERALLENR;
-    // private int CRN;
-    
-
     @CsvBindByName(column = "CRN")
     private int CRN;
 
