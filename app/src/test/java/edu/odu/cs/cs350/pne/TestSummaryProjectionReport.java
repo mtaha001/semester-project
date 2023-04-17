@@ -13,16 +13,16 @@ public class TestSummaryProjectionReport {
     @Test
     public void testCalcPercentElapsed() {
         // Set up test data
-        LocalDate startDate = LocalDate.of(2022, 1, 1);
-        LocalDate endDate = LocalDate.of(2022, 1, 31);
-        LocalDate snapDate = LocalDate.of(2022, 1, 15);
-        double expectedPercentElapsed = 46.67;
+    String startDate = "2022-01-01";
+    String endDate = "2022-01-31";
+    String snapDate = "2022-01-15";
+    double expectedPercentElapsed = 46.67;
 
-        // Call the method under test
-        double actualPercentElapsed = SummaryProjectionReport.calcPercentElapsed(startDate, endDate, snapDate);
+    // Call the method under test
+    double actualPercentElapsed = SummaryProjectionReport.calcPercentElapsed(startDate, endDate, snapDate);
 
-        // Assert the result
-        assertEquals(expectedPercentElapsed, actualPercentElapsed, 0.01);
+    // Assert the result
+    assertEquals(expectedPercentElapsed, actualPercentElapsed, 0.01);
     }
 }
 
