@@ -38,11 +38,11 @@ public class Section {
     @CsvBindByName(column = "XLSTGROUP")
     private String XLSTGROUP;
 
-    // @CsvBindByName(column = "OVERALL CAP")
-    // private int OVERALLCAP;
+    @CsvBindByName(column = "OVERALL CAP")
+    private int OVERALLCAP;
 
-    // @CsvBindByName(column = "OVERALL ENR")
-    // private int OVERALLENR;
+    @CsvBindByName(column = "OVERALL ENR")
+    private int OVERALLENR;
 
    
 
@@ -116,18 +116,18 @@ public class Section {
      * 
      * @return overall capacity
      */
-    // public int getOVERALLCAP() {
-    //     return OVERALLCAP;
-    // }
+    public int getOVERALLCAP() {
+        return OVERALLCAP;
+    }
     
     /*
      * getOVERALLENR()
      * 
      * @return enrolled
      */
-    // public int getOVERALLENR() {
-    //     return OVERALLENR;
-    // }
+    public int getOVERALLENR() {
+        return OVERALLENR;
+    }
     
     //setter for CRN
     public void setCRN(int crn) {
@@ -158,6 +158,14 @@ public class Section {
     public void setXLSTGROUP(String xlstgroup)
     {
         this.XLSTGROUP = xlstgroup;
+    }
+
+    public void setOVERALLCAP(int overallcap){
+        this.OVERALLCAP = overallcap;
+    }
+
+    public void setOVERALLENR(int overallenr){
+        this.OVERALLENR = overallenr;
     }
     
 

@@ -54,6 +54,16 @@ public class TestSection {
         section.setXLSTGROUP("CS-350");
         assertEquals("CS-350", section.getXLSTGROUP());
     }
+
+    @Test void testGetOVERALLCAP(){
+        section.setOVERALLCAP(200);
+        assertEquals(200, section.getOVERALLCAP());
+    }
+
+    @Test void testGetOVERALLENR(){
+        section.setOVERALLENR(200);
+        assertEquals(200, section.getOVERALLENR());;
+    }
     
 
 
