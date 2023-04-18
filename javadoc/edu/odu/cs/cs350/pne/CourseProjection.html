@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -129,9 +129,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><code>java.lang.Comparable&lt;<a href="CourseProjection.html" title="class in edu.odu.cs.cs350.pne">CourseProjection</a>&gt;</code></dd>
+</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">CourseProjection</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class in edu.odu.cs.cs350.pne">CourseProjection</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -178,30 +183,35 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCurrentEnrollment()">getCurrentEnrollment</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#compareTo(edu.odu.cs.cs350.pne.CourseProjection)">compareTo</a></span>&#8203;(<a href="CourseProjection.html" title="class in edu.odu.cs.cs350.pne">CourseProjection</a>&nbsp;other)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCurrentEnrollment()">getCurrentEnrollment</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getName()">getName</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getProjectedEnrollment()">getProjectedEnrollment</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTotalCap()">getTotalCap</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCurrentEnrollment(int)">setCurrentEnrollment</a></span>&#8203;(int&nbsp;currentEnrollment)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -300,13 +310,26 @@ extends java.lang.Object</pre>
 <a id="toString()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>toString</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;toString()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a id="compareTo(edu.odu.cs.cs350.pne.CourseProjection)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>compareTo</h4>
+<pre class="methodSignature">public&nbsp;int&nbsp;compareTo&#8203;(<a href="CourseProjection.html" title="class in edu.odu.cs.cs350.pne">CourseProjection</a>&nbsp;other)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>compareTo</code>&nbsp;in interface&nbsp;<code>java.lang.Comparable&lt;<a href="CourseProjection.html" title="class in edu.odu.cs.cs350.pne">CourseProjection</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
