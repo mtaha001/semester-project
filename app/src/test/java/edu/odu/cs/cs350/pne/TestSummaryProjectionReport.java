@@ -31,7 +31,7 @@ public class TestSummaryProjectionReport {
         assertEquals(5, projections.get(0).getProjectedEnrollment());
         assertEquals(20, projections.get(0).getTotalCap());
     }
-    
+
     @Test
     public void testCalcPercentElapsed() {
     
