@@ -20,8 +20,15 @@ public class SummaryProjectionReport {
         BigDecimal totalDays = BigDecimal.valueOf(ChronoUnit.DAYS.between(start, end));
         BigDecimal elapsedDays = BigDecimal.valueOf(ChronoUnit.DAYS.between(start, current));
         BigDecimal percentElapsed = elapsedDays.divide(totalDays, 10, RoundingMode.HALF_UP).multiply(BigDecimal.valueOf(100));
-        percentElapsed = percentElapsed.setScale(2, RoundingMode.HALF_UP); // Round to 2 decimal places
-        return percentElapsed.doubleValue();
+        
+        // If number is 0 or negative, return 0. If number is greater than 100, return 100.
+        if (percentElapsed.compareTo(BigDecimal.ZERO) <= 0) {
+            return 0;
+        } else if (percentElapsed.compareTo(BigDecimal.valueOf(100)) > 0) {
+            return 100;
+        } else {
+            return percentElapsed.setScale(2, RoundingMode.HALF_UP).intValue();
+        }        
         
     }
 

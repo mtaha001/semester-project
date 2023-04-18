@@ -16,7 +16,7 @@ public class TestSummaryProjectionReport {
     String startDate = "2022-01-01";
     String endDate = "2022-01-31";
     String snapDate = "2022-01-15";
-    double expectedPercentElapsed = 46.67;
+    double expectedPercentElapsed = 46.0;
 
     // Call the method under test
     double actualPercentElapsed = SummaryProjectionReport.calcPercentElapsed(startDate, endDate, snapDate);
