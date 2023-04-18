@@ -9,11 +9,17 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 
 public class SummaryProjectionReport {
-    public static double calcPercentElapsed(String startDate, String endDate, String snapDate) {
-        
+
+
+    /*
+     * This method calculate the percentage of time elapsed
+     * 
+     * @param directoryLoc - Strings represent start date, end date and snap date
+     */
+    public static double calcPercentElapsed(String startDate, String endDate, String snapDate) { 
         //startDate is the beginning of the enrollment period
         //endDate is the end of the enrollment period
-        //snapDate is the day of the snapshot
+        //snapDate is the day of the snapshot - current
         LocalDate start = LocalDate.parse(startDate);
         LocalDate end = LocalDate.parse(endDate);
         LocalDate current = LocalDate.parse(snapDate);
