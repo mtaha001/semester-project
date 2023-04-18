@@ -10,6 +10,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
     id 'java'
+    id 'edu.odu.cs.report_accumulator' version '1.4'
 }
 
 repositories {
@@ -73,6 +74,13 @@ task reports(type: Copy) {
     dependsOn 'build'
     from "src/main/html"
     into "build/reports"
+}
+
+reportStats {
+	reportsURL = 'https://project/reports/url/'
+    htmlSourceDir = file('src/main/html')  // default value
+    reportsDir = file('build/reports') // default value
+    buildID = "12345" 
 }
 
 task gstatus (type: Exec) {
