@@ -1,12 +1,12 @@
 package edu.odu.cs.cs350.pne;
 
-public class CourseProjection {
+public class CourseProjection implements Comparable<CourseProjection> {
     private String name;
     private int currentEnrollment;
     private int projectedEnrollment;
     private int totalCap;
 
-    public CourseProjection(String name, int currentEnrollment, int projectedEnrollment, int totalCap) {
+    public CourseProjection (String name, int currentEnrollment, int projectedEnrollment, int totalCap) {
         this.name = name;
         this.currentEnrollment = currentEnrollment;
         this.projectedEnrollment = projectedEnrollment;
@@ -37,5 +37,11 @@ public class CourseProjection {
     public String toString() {
         String marker = projectedEnrollment > totalCap ? "*" : " ";
         return String.format("%s%-6s %4d %4d %4d", marker, name, currentEnrollment, projectedEnrollment, totalCap);
+    }
+
+    
+    @Override
+    public int compareTo(CourseProjection other) {
+        return this.name.compareTo(other.name);
     }
 }

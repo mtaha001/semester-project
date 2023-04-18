@@ -4,11 +4,33 @@ package edu.odu.cs.cs350.pne;
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeSet;
 
 
 public class TestSummaryProjectionReport {
 
+    @Test
+    public void testEmptyProjections() {
+        SummaryProjectionReport report = new SummaryProjectionReport();
+        List<CourseProjection> projections = report.getProjections();
+        assertTrue(projections.isEmpty());
+    }
+    
+    @Test
+    public void testAddCourseProjection() {
+        SummaryProjectionReport report = new SummaryProjectionReport();
+        CourseProjection courseProjection1 = new CourseProjection("CS 350", 10, 5, 20);
+        report.addCourseProjection(courseProjection1);
+        
+        List<CourseProjection> projections = report.getProjections();
+        assertEquals(1, projections.size());
+        assertEquals("CS 350", projections.get(0).getName());
+        assertEquals(10, projections.get(0).getCurrentEnrollment());
+        assertEquals(5, projections.get(0).getProjectedEnrollment());
+        assertEquals(20, projections.get(0).getTotalCap());
+    }
     
     @Test
     public void testCalcPercentElapsed() {
