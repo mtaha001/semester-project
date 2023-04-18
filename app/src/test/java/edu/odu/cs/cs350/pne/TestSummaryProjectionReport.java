@@ -12,17 +12,28 @@ public class TestSummaryProjectionReport {
     
     @Test
     public void testCalcPercentElapsed() {
-        // Set up test data
+    
+    // Test with start date before snap date and end date after snap date
     String startDate = "2022-01-01";
-    String endDate = "2022-01-31";
-    String snapDate = "2022-01-15";
-    double expectedPercentElapsed = 46.0;
+    String endDate = "2022-12-31";
+    String snapDate = "2022-06-30";
+    double percentElapsed = SummaryProjectionReport.calcPercentElapsed(startDate, endDate, snapDate);
+    assertEquals(49.0, percentElapsed, 0.01);
 
-    // Call the method under test
-    double actualPercentElapsed = SummaryProjectionReport.calcPercentElapsed(startDate, endDate, snapDate);
+    // Test with snap date before start date
+    startDate = "2022-01-01";
+    endDate = "2022-12-31";
+    snapDate = "2021-12-31";
+    percentElapsed = SummaryProjectionReport.calcPercentElapsed(startDate, endDate, snapDate);
+    assertEquals(0.00, percentElapsed, 0.01);
 
-    // Assert the result
-    assertEquals(expectedPercentElapsed, actualPercentElapsed, 0.01);
+    // Test with snap date after end date
+    startDate = "2022-01-01";
+    endDate = "2022-12-31";
+    snapDate = "2023-01-01";
+    percentElapsed = SummaryProjectionReport.calcPercentElapsed(startDate, endDate, snapDate);
+    assertEquals(100.00, percentElapsed, 0.01);
+
     }
 }
 
