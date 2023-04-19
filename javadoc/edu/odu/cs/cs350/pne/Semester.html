@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -174,39 +174,56 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>java.util.List&lt;java.io.File&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fetchFiles()">fetchFiles</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Fetch all relevant csv files and the "dates.txt" file
+ from the semester's directory.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAddDeadlineDate()">getAddDeadlineDate</a></span>()</code></th>
+<td class="colLast">
+<div class="block">getAddDeadLineDate()</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCode()">getCode</a></span>()</code></th>
 <td class="colLast">
 <div class="block">getCode()</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDirLoc()">getDirLoc</a></span>()</code></th>
 <td class="colLast">
 <div class="block">getDirLoc()</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPreRegDate()">getPreRegDate</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">getPreRegDate()</div>
+</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSeason()">getSeason</a></span>()</code></th>
 <td class="colLast">
 <div class="block">getSeason()</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getYear()">getYear</a></span>()</code></th>
 <td class="colLast">
 <div class="block">getYear()</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDates(java.io.File)">setDates</a></span>&#8203;(java.io.File&nbsp;file)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -259,6 +276,28 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a id="fetchFiles()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fetchFiles</h4>
+<pre class="methodSignature">public&nbsp;java.util.List&lt;java.io.File&gt;&nbsp;fetchFiles()
+                                        throws java.io.IOException</pre>
+<div class="block">Fetch all relevant csv files and the "dates.txt" file
+ from the semester's directory.
+ The directory is a system path.
+ Each csv file is put into the csvFiles list.
+ If the file doesn't exist, or any other issue is encountered,
+ an IOException is thrown.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>List of fetched csv files</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd>
+</dl>
+</li>
+</ul>
 <a id="setDates(java.io.File)">
 <!--   -->
 </a>
@@ -334,10 +373,29 @@ extends java.lang.Object</pre>
 <a id="getPreRegDate()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getPreRegDate</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getPreRegDate()</pre>
+<div class="block">getPreRegDate()</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>pre registration date</dd>
+</dl>
+</li>
+</ul>
+<a id="getAddDeadlineDate()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getAddDeadlineDate</h4>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getAddDeadlineDate()</pre>
+<div class="block">getAddDeadLineDate()</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>add deadline date</dd>
+</dl>
 </li>
 </ul>
 </li>
