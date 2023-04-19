@@ -11,6 +11,7 @@ plugins {
     id 'application'
     id 'java'
     id 'edu.odu.cs.report_accumulator' version '1.4'
+    id 'pmd'
 }
 
 repositories {
@@ -157,3 +158,10 @@ reportStats {
     reportsDir = file('build/reports') // default value
     buildID = "12345" 
 }
+
+pmd {
+    ignoreFailures = true
+    consoleOutput = false
+    ruleSetFiles = ["config/pmd/ruleset.xml"]
+}
+pmdTest.enabled = false
