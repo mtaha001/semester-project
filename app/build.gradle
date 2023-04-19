@@ -41,7 +41,6 @@ dependencies {
     //Add the Apache POI XSSF dependency
     implementation 'org.apache.poi:poi-ooxml:5.1.0'
 
-    implementation 'org.jsoup:jsoup:1.14.2'
 
 }
 
