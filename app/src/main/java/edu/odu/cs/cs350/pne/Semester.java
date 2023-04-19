@@ -17,6 +17,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+import java.nio.file.Files;
+import java.util.List;
+import java.util.stream.Stream;
+
 
 
 
@@ -32,6 +36,8 @@ public class Semester {
     private String addDeadlineDate;
     private ArrayList<Snapshot> snapshots;
     private ArrayList<Offering> offerings;
+    private List<File> csvFiles;
+    private File dates;
 
     /*
      * Construct a Semester object
@@ -100,6 +106,46 @@ public class Semester {
     }
 
 
+    /**
+     * Fetch all relevant csv files and the "dates.txt" file
+     * from the semester's directory.
+     * The directory is a system path.
+     * Each csv file is put into the csvFiles list.
+     * If the file doesn't exist, or any other issue is encountered,
+     * an IOException is thrown.
+     *
+     * @return List of fetched csv files
+     * @throws IOException
+     */
+    public List<File> fetchFiles() throws IOException {
+        this.csvFiles = new ArrayList<File>();
+
+        // Find the dates file first to set the pre-registration and add deadline dates
+        try (Stream<Path> files = Files.walk(Paths.get(this.directoryLocation))) {
+            files.forEach(filePath -> {
+                if (Files.isRegularFile(filePath) && filePath.toString().endsWith(".csv")) {
+                    this.csvFiles.add(filePath.toFile());
+                } else if (Files.isRegularFile(filePath) && filePath.toString().endsWith("dates.txt")) {
+                    this.dates = filePath.toFile();
+                    try {
+                        setDates(this.dates);
+                    } catch (IOException e) {
+                        throw new RuntimeException("Error setting dates from file: " + e.getMessage());
+                    }
+                }
+            });
+        }
+
+        // If no CSV files were found, throw an IOException
+        if (this.csvFiles.isEmpty()) {
+            throw new IOException("No CSV files found in semester directory.");
+        }
+
+        return this.csvFiles;
+    }
+
+
+    //Sets the pre-registration and add deadline dates based on the data found in the "dates.txt" file
     public void setDates(File file) throws IOException {
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -149,8 +195,25 @@ public class Semester {
         return season;
     }
 
+    /**
+     * getPreRegDate()
+     * 
+     * @return pre registration date
+     */
     public String getPreRegDate() {
         return preRegistrationDate;
     }
 
+    /**
+     * getAddDeadLineDate()
+     * 
+     * @return add deadline date
+     */
+    public String getAddDeadlineDate(){
+        return addDeadlineDate;
+    }
+
+
 }
+
+

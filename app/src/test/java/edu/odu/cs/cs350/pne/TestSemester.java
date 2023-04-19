@@ -12,9 +12,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 
@@ -107,6 +110,39 @@ class TestSemester {
         assertEquals(s1.getPreRegDate(), "2022-10-31");
     }
 
+    @Test
+    public void testFetchFiles() throws IOException {
+        // Create a temporary directory and some files
+        Path tempDir = Files.createTempDirectory("temp");
+        File datesFile = new File(tempDir.toFile(), "dates.txt");
+        File csvFile1 = new File(tempDir.toFile(), "file1.csv");
+        File csvFile2 = new File(tempDir.toFile(), "file2.csv");
+    
+        // Write some data to the files
+        Files.write(datesFile.toPath(), Arrays.asList("2022-01-01", "2022-01-15"));
+        Files.write(csvFile1.toPath(), Arrays.asList("header1", "data1"));
+        Files.write(csvFile2.toPath(), Arrays.asList("header2", "data2"));
+    
+        // Create a Semester object for the temporary directory
+        Semester semester = new Semester(tempDir.toString());
+    
+        // Fetch the files
+        List<File> csvFiles = semester.fetchFiles();
+    
+        // Check that the files were fetched correctly
+        assertEquals(2, csvFiles.size());
+        assertTrue(csvFiles.contains(csvFile1));
+        assertTrue(csvFiles.contains(csvFile2));
+        assertEquals("2022-01-01", semester.getPreRegDate());
+        assertEquals("2022-01-15", semester.getAddDeadlineDate());
+        
+        // Clean up the temporary directory and files
+        Files.deleteIfExists(datesFile.toPath());
+        Files.deleteIfExists(csvFile1.toPath());
+        Files.deleteIfExists(csvFile2.toPath());
+        Files.deleteIfExists(tempDir);
+        
+    }
   
 
 
