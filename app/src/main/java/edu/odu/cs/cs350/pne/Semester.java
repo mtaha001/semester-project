@@ -17,6 +17,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+
+
+
+
+
 public class Semester {
 
     private String directoryLocation;
@@ -94,6 +99,18 @@ public class Semester {
         }
     }
 
+
+    public void setDates(File file) throws IOException {
+        FileReader fileReader = new FileReader(file);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+    
+        preRegistrationDate = bufferedReader.readLine();
+        addDeadlineDate = bufferedReader.readLine();
+    
+        bufferedReader.close();
+    }
+    
+    
     /**
      * getCode()
      * 
