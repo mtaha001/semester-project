@@ -12,38 +12,41 @@ import org.junit.jupiter.api.BeforeEach;
 public class TestOffering {
 
     private Offering offering;
-    
+
     @BeforeEach
     public void setUp() {
-        offering = new Offering();
+        offering = new Offering("CS471", "211655", 50, 30);
     }
-    
+
     @Test
-    public void testGetSetINSTRUCTOR() {
-        String instructor = "ZEIL, S";
-        offering.setINSTRUCTOR(instructor);
-        assertEquals(instructor, offering.getINSTRUCTOR());
+    public void testGetOVERALLENR() {
+        assertEquals(30, offering.getOVERALLENR());
     }
-    
+
     @Test
-    public void testGetSetCRSE() {
-        String crse = "350";
-        offering.setCRSE(crse);
-        assertEquals(crse, offering.getCRSE());
+    public void testGetOVERALLCAP() {
+        assertEquals(50, offering.getOVERALLCAP());
     }
-    
+
     @Test
-    public void testGetSetOVERALLENR() {
-        String overallEnr = "45";
-        offering.setOVERALLENR(overallEnr);
-        assertEquals(overallEnr, offering.getOVERALLENR());
+    public void testSetCRSE() {
+        offering.setCRSE("CS");
+        assertEquals("CS", offering.getCRSE());
     }
-    
+
     @Test
-    public void testGetSetOVERALLCAP() {
-        String overallCap = "60";
-        offering.setOVERALLCAP(overallCap);
-        assertEquals(overallCap, offering.getOVERALLCAP());
+    public void testSetOVERALLENR() {
+        offering.setOVERALLENR(40);
+        assertEquals(40, offering.getOVERALLENR());
     }
+
+    @Test
+    public void testSetOVERALLCAP() {
+        offering.setOVERALLCAP(60);
+        assertEquals(60, offering.getOVERALLCAP());
+    }
+
+
+    
     
 }

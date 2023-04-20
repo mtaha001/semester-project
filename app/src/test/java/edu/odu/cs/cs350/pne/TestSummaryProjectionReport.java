@@ -20,16 +20,21 @@ public class TestSummaryProjectionReport {
     
     @Test
     public void testAddCourseProjection() {
+
         SummaryProjectionReport report = new SummaryProjectionReport();
-        CourseProjection courseProjection1 = new CourseProjection("CS 350", 10, 5, 20);
+        List<Offering> offerings = new ArrayList<>();
+        Offering offering1 = new Offering("CS 350", "278890", 50, 40);
+        Offering offering2 = new Offering("CS 350", "267981", 60, 50);
+        offerings.add(offering1);
+        offerings.add(offering2);
+        CourseProjection courseProjection1 = new CourseProjection("CS 350", offerings, 5);
         report.addCourseProjection(courseProjection1);
-        
         List<CourseProjection> projections = report.getProjections();
         assertEquals(1, projections.size());
         assertEquals("CS 350", projections.get(0).getName());
-        assertEquals(10, projections.get(0).getCurrentEnrollment());
+        assertEquals(90, projections.get(0).getCurrentEnrollment());
         assertEquals(5, projections.get(0).getProjectedEnrollment());
-        assertEquals(20, projections.get(0).getTotalCap());
+        assertEquals(110, projections.get(0).getTotalCap());
     }
 
     @Test
