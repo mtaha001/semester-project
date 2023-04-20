@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.48.0" timestamp="2023-04-19T22:26:41.600">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.48.0" timestamp="2023-04-20T12:32:30.395">
 <file name="/home/runner/work/semester-project/semester-project/app/src/main/java/edu/odu/cs/cs350/pne/CourseProjection.java">
 <violation beginline="4" endline="4" begincolumn="20" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="CourseProjection" variable="name" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
@@ -20,31 +20,31 @@ Avoid empty if statements
 </violation>
 </file>
 <file name="/home/runner/work/semester-project/semester-project/app/src/main/java/edu/odu/cs/cs350/pne/Driver.java">
-<violation beginline="16" endline="48" begincolumn="17" endcolumn="108" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="dateWasGiven" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'dateWasGiven' (lines '16'-'48').
+<violation beginline="16" endline="49" begincolumn="17" endcolumn="108" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="dateWasGiven" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'dateWasGiven' (lines '16'-'49').
 </violation>
-<violation beginline="18" endline="48" begincolumn="29" endcolumn="78" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="historicalSemesterList" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'historicalSemesterList' (lines '18'-'48').
+<violation beginline="19" endline="49" begincolumn="29" endcolumn="78" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="historicalSemesterList" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'historicalSemesterList' (lines '19'-'49').
 </violation>
-<violation beginline="24" endline="24" begincolumn="26" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 's' (lines '24'-'24').
+<violation beginline="25" endline="25" begincolumn="26" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 's' (lines '25'-'25').
 </violation>
-<violation beginline="24" endline="48" begincolumn="26" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 's' (lines '24'-'48').
+<violation beginline="25" endline="49" begincolumn="26" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 's' (lines '25'-'49').
 </violation>
-<violation beginline="42" endline="42" begincolumn="24" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="DPRPath" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'DPRPath' (lines '42'-'42').
+<violation beginline="43" endline="43" begincolumn="24" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="DPRPath" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'DPRPath' (lines '43'-'43').
 </violation>
-<violation beginline="42" endline="48" begincolumn="24" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="DPRPath" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'DPRPath' (lines '42'-'48').
+<violation beginline="43" endline="49" begincolumn="24" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="DPRPath" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'DPRPath' (lines '43'-'49').
 </violation>
-<violation beginline="45" endline="45" begincolumn="20" endcolumn="52" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="optionalDate" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'optionalDate' (lines '45'-'45').
+<violation beginline="46" endline="46" begincolumn="20" endcolumn="52" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="optionalDate" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'optionalDate' (lines '46'-'46').
 </violation>
-<violation beginline="45" endline="48" begincolumn="20" endcolumn="52" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="optionalDate" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'optionalDate' (lines '45'-'48').
+<violation beginline="46" endline="49" begincolumn="20" endcolumn="52" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="optionalDate" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'optionalDate' (lines '46'-'49').
 </violation>
-<violation beginline="59" endline="59" begincolumn="27" endcolumn="27" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="minParametersMet" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+<violation beginline="60" endline="60" begincolumn="27" endcolumn="27" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="minParametersMet" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
 Avoid using Literals in Conditional Statements
 </violation>
 </file>
@@ -84,10 +84,10 @@ Ensure that resources like this FileReader object are closed after use
 <violation beginline="84" endline="84" begincolumn="24" endcolumn="37" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Semester" method="Semester" variable="bufferedReader" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
 Ensure that resources like this FileReader object are closed after use
 </violation>
-<violation beginline="143" endline="143" begincolumn="20" endcolumn="29" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Semester" method="setDates" variable="fileReader" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+<violation beginline="146" endline="146" begincolumn="20" endcolumn="29" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Semester" method="setDates" variable="fileReader" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
 Ensure that resources like this FileReader object are closed after use
 </violation>
-<violation beginline="144" endline="144" begincolumn="24" endcolumn="37" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Semester" method="setDates" variable="bufferedReader" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+<violation beginline="147" endline="147" begincolumn="24" endcolumn="37" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Semester" method="setDates" variable="bufferedReader" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
 Ensure that resources like this FileReader object are closed after use
 </violation>
 </file>
