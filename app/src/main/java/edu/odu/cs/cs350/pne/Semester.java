@@ -138,7 +138,10 @@ public class Semester {
     }
 
 
-    //Sets the pre-registration and add deadline dates based on the data found in the "dates.txt" file
+    /**setDates()Sets the pre-registration and add deadline dates based on 
+     * the data found in the "dates.txt" file
+     * @throws IOException 
+     * @param file a dates.txt file from a semester directory**/
     public void setDates(File file) throws IOException {
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
