@@ -47,7 +47,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'edu.odu.cs.cs350.pne.app'
+    mainClass = 'edu.odu.cs.cs350.pne.App'
 }
 
 tasks.named('test') {
