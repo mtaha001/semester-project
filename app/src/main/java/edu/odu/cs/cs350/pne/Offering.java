@@ -17,11 +17,23 @@ public class Offering {
     private String CRSE; //course
     
     @CsvBindByName(column = "OVERALL ENR")
-    private String OVERALLENR; //overall enrollment
+    private int OVERALLENR; //overall enrollment
 
     @CsvBindByName(column = "OVERALL CAP")
-    private String OVERALLCAP; //overall capacity
+    private int OVERALLCAP; //overall capacity
 
+    private String courseName;
+
+    private String section;
+
+
+    
+    public Offering(String courseName, String section, int overallCap, int overallEnrollment) {
+        this.courseName = CRSE;
+        this.section = section;
+        this.OVERALLCAP = overallCap;
+        this.OVERALLENR = overallEnrollment;
+    }
     
     /**
      * getINSTRUCTOR()
@@ -46,7 +58,7 @@ public class Offering {
      * 
      * @return the OVERALLENR
      */
-    public String getOVERALLENR(){
+    public int getOVERALLENR(){
         return OVERALLENR;
     }
 
@@ -55,7 +67,7 @@ public class Offering {
      * 
      * @return the OVERALLCAP
      */
-    public String getOVERALLCAP(){
+    public int getOVERALLCAP(){
         return OVERALLCAP;
     }
 
@@ -70,12 +82,12 @@ public class Offering {
     }
 
     //setter for OVERALLENR
-    public void setOVERALLENR(String overallenr){
+    public void setOVERALLENR(int overallenr){
         this.OVERALLENR = overallenr;
     }
 
     //stter for OVERCAP
-    public void setOVERALLCAP(String overallcap){
+    public void setOVERALLCAP(int overallcap){
         this.OVERALLCAP = overallcap;
     }
 
