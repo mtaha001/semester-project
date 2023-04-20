@@ -3,12 +3,12 @@ package edu.odu.cs.cs350.pne;
 import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvBindByName;
-import java.util.ArrayList;
+import java.util.List;
 
 
 public class Offering {
 
-    private ArrayList<Section> sections;
+    private List<Section> sections;
 
     @CsvBindByName(column = "INSTRUCTOR")
     private String INSTRUCTOR;
@@ -16,23 +16,26 @@ public class Offering {
     @CsvBindByName(column = "CRSE")
     private String CRSE; //course
     
-    @CsvBindByName(column = "OVERALL ENR")
-    private int OVERALLENR; //overall enrollment
+    // @CsvBindByName(column = "OVERALL ENR")
+    // private int OVERALLENR; //overall enrollment
 
-    @CsvBindByName(column = "OVERALL CAP")
-    private int OVERALLCAP; //overall capacity
+    // @CsvBindByName(column = "OVERALL CAP")
+    // private int OVERALLCAP; //overall capacity
 
     private String courseName;
 
-    private String section;
+    private int OVERALLENR;
+
+    private int OVERALLCAP;
 
 
     
-    public Offering(String courseName, String section, int overallCap, int overallEnrollment) {
-        this.courseName = CRSE;
-        this.section = section;
-        this.OVERALLCAP = overallCap;
-        this.OVERALLENR = overallEnrollment;
+    public Offering(String courseName, List<Section> sections) {
+        this.courseName = courseName;
+        this.sections = sections;
+        this.OVERALLCAP = getOVERALLCAP();
+        this.OVERALLENR = getOVERALLENR();
+        
     }
     
     /**
@@ -59,7 +62,11 @@ public class Offering {
      * @return the OVERALLENR
      */
     public int getOVERALLENR(){
-        return OVERALLENR;
+        int total = 0;
+        for (Section section : sections) {
+            total += section.getOVERALLENR();
+        }
+        return total;
     }
 
     /**
@@ -68,7 +75,11 @@ public class Offering {
      * @return the OVERALLCAP
      */
     public int getOVERALLCAP(){
-        return OVERALLCAP;
+        int total = 0;
+        for (Section section : sections) {
+            total += section.getOVERALLCAP();
+        }
+        return total;
     }
 
     // setter for INSTRUCTOR
@@ -90,5 +101,14 @@ public class Offering {
     public void setOVERALLCAP(int overallcap){
         this.OVERALLCAP = overallcap;
     }
+
+    public List<Section> getOfferings() {
+        return sections;
+    }
+
+    public void setOfferings(List<Section> sections) {
+        this.sections = sections;
+    }
+
 
 }

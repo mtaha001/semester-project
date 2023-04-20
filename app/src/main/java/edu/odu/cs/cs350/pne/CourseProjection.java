@@ -45,7 +45,7 @@ public class CourseProjection implements Comparable<CourseProjection> {
         return total;
     }
 
-     public List<Offering> getOfferings() {
+    public List<Offering> getOfferings() {
         return offerings;
     }
 
