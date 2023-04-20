@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.48.0" timestamp="2023-04-20T14:46:31.548">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.48.0" timestamp="2023-04-20T16:53:27.494">
 <file name="/home/runner/work/semester-project/semester-project/app/src/main/java/edu/odu/cs/cs350/pne/CourseProjection.java">
 <violation beginline="6" endline="6" begincolumn="20" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="CourseProjection" variable="name" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
@@ -55,11 +55,17 @@ Avoid using Literals in Conditional Statements
 </violation>
 </file>
 <file name="/home/runner/work/semester-project/semester-project/app/src/main/java/edu/odu/cs/cs350/pne/Offering.java">
+<violation beginline="11" endline="11" begincolumn="27" endcolumn="34" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Offering" variable="sections" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
 <violation beginline="25" endline="25" begincolumn="20" endcolumn="29" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Offering" variable="courseName" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
 </violation>
-<violation beginline="27" endline="27" begincolumn="20" endcolumn="26" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Offering" variable="section" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
+<violation beginline="36" endline="36" begincolumn="27" endcolumn="41" rule="ConstructorCallsOverridableMethod" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Offering" method="Offering" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#constructorcallsoverridablemethod" priority="1">
+Overridable method 'getOVERALLCAP' called during object construction
+</violation>
+<violation beginline="37" endline="37" begincolumn="27" endcolumn="41" rule="ConstructorCallsOverridableMethod" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Offering" method="Offering" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#constructorcallsoverridablemethod" priority="1">
+Overridable method 'getOVERALLENR' called during object construction
 </violation>
 </file>
 <file name="/home/runner/work/semester-project/semester-project/app/src/main/java/edu/odu/cs/cs350/pne/Section.java">

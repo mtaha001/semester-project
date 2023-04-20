@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -152,10 +152,8 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,int,int)">Offering</a></span>&#8203;(java.lang.String&nbsp;courseName,
-        java.lang.String&nbsp;section,
-        int&nbsp;overallCap,
-        int&nbsp;overallEnrollment)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.util.List)">Offering</a></span>&#8203;(java.lang.String&nbsp;courseName,
+        java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;&nbsp;sections)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -191,35 +189,45 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOfferings()">getOfferings</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOVERALLCAP()">getOVERALLCAP</a></span>()</code></th>
 <td class="colLast">
 <div class="block">getOVERALLCAP()</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOVERALLENR()">getOVERALLENR</a></span>()</code></th>
 <td class="colLast">
 <div class="block">getOVERALLENR()</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCRSE(java.lang.String)">setCRSE</a></span>&#8203;(java.lang.String&nbsp;crse)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setINSTRUCTOR(java.lang.String)">setINSTRUCTOR</a></span>&#8203;(java.lang.String&nbsp;instructor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOfferings(java.util.List)">setOfferings</a></span>&#8203;(java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;&nbsp;sections)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOVERALLCAP(int)">setOVERALLCAP</a></span>&#8203;(int&nbsp;overallcap)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOVERALLENR(int)">setOVERALLENR</a></span>&#8203;(int&nbsp;overallenr)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -248,16 +256,14 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(java.lang.String,java.lang.String,int,int)">
+<a id="&lt;init&gt;(java.lang.String,java.util.List)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Offering</h4>
 <pre>public&nbsp;Offering&#8203;(java.lang.String&nbsp;courseName,
-                java.lang.String&nbsp;section,
-                int&nbsp;overallCap,
-                int&nbsp;overallEnrollment)</pre>
+                java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;&nbsp;sections)</pre>
 </li>
 </ul>
 </li>
@@ -356,10 +362,28 @@ extends java.lang.Object</pre>
 <a id="setOVERALLCAP(int)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setOVERALLCAP</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setOVERALLCAP&#8203;(int&nbsp;overallcap)</pre>
+</li>
+</ul>
+<a id="getOfferings()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOfferings</h4>
+<pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;&nbsp;getOfferings()</pre>
+</li>
+</ul>
+<a id="setOfferings(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setOfferings</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setOfferings&#8203;(java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;&nbsp;sections)</pre>
 </li>
 </ul>
 </li>
