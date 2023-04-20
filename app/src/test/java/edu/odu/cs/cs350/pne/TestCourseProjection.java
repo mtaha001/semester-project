@@ -11,8 +11,10 @@ public class TestCourseProjection {
     
     @Test
     public void testConstructorAndGetters() {
-        Offering offering1 = new Offering("CS 350 ", "236444", 50, 40);
-        Offering offering2 = new Offering("CS 350", "278889", 60, 50);
+
+        List<Section> sections = new ArrayList<>();
+        Offering offering1 = new Offering("CS 350 ", sections);
+        Offering offering2 = new Offering("CS 350", sections);
         List<Offering> offerings = new ArrayList<>();
         offerings.add(offering1);
         offerings.add(offering2);
@@ -20,9 +22,9 @@ public class TestCourseProjection {
         CourseProjection courseProjection = new CourseProjection("CS 350", offerings, 100);
 
         assertEquals("CS 350", courseProjection.getName());
-        assertEquals(90, courseProjection.getCurrentEnrollment());
+        assertEquals(0, courseProjection.getCurrentEnrollment());
         assertEquals(100, courseProjection.getProjectedEnrollment());
-        assertEquals(110, courseProjection.getTotalCap());
+        assertEquals(0, courseProjection.getTotalCap());
 
     }
 

@@ -9,43 +9,65 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
+import java.util.List;
 public class TestOffering {
-
     private Offering offering;
+    private List<Section> sections;
 
-    @BeforeEach
-    public void setUp() {
-        offering = new Offering("CS471", "211655", 50, 30);
+    @Test
+    public void testGetINSTRUCTOR() {
+        sections = new ArrayList<>();
+        Section section1 = new Section();
+        Section section2 = new Section();
+        sections.add(section1);
+        sections.add(section2);
+        offering = new Offering("Test Course", sections);
+        offering.setINSTRUCTOR("Test Instructor");
+        String result = offering.getINSTRUCTOR();
+        assertEquals("Test Instructor", result);
+    }
+
+    @Test
+    public void testGetCRSE() {
+        sections = new ArrayList<>();
+        Section section1 = new Section();
+        Section section2 = new Section();
+        sections.add(section1);
+        sections.add(section2);
+        offering = new Offering("Test Course", sections);
+        offering.setCRSE("TEST");
+        String result = offering.getCRSE();
+        assertEquals("TEST", result);
     }
 
     @Test
     public void testGetOVERALLENR() {
-        assertEquals(30, offering.getOVERALLENR());
+        Section section1 = new Section();
+        section1.setOVERALLENR(20);
+        Section section2 = new Section();
+        section2.setOVERALLENR(30);
+        List<Section> sections = new ArrayList<>();
+        sections.add(section1);
+        sections.add(section2);
+        Offering offering = new Offering("Computer Science 101", sections);
+        assertEquals(50, offering.getOVERALLENR());
     }
 
     @Test
     public void testGetOVERALLCAP() {
+        Section section1 = new Section();
+        section1.setOVERALLCAP(20);
+        Section section2 = new Section();
+        section2.setOVERALLCAP(30);
+        List<Section> sections = new ArrayList<>();
+        sections.add(section1);
+        sections.add(section2);
+        Offering offering = new Offering("Computer Science 101", sections);
         assertEquals(50, offering.getOVERALLCAP());
     }
 
-    @Test
-    public void testSetCRSE() {
-        offering.setCRSE("CS");
-        assertEquals("CS", offering.getCRSE());
-    }
-
-    @Test
-    public void testSetOVERALLENR() {
-        offering.setOVERALLENR(40);
-        assertEquals(40, offering.getOVERALLENR());
-    }
-
-    @Test
-    public void testSetOVERALLCAP() {
-        offering.setOVERALLCAP(60);
-        assertEquals(60, offering.getOVERALLCAP());
-    }
-
+   
+    
 
     
     
