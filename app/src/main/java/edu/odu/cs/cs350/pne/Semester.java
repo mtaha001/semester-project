@@ -32,6 +32,7 @@ public class Semester {
     private List<File> csvFiles;
     private File dates;
 
+
     /*
      * Construct a Semester object
      * 

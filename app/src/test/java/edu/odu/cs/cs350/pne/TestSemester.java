@@ -36,7 +36,7 @@ class TestSemester {
         // for these tests in a way that will work on any machine, but i can't find any.
         // I tried using the relative paths to the semester directories, but that
         // wouldn't work.
-        String s1Dir = "src\\test\\data\\202010";
+        String s1Dir = "/src/test/data/202010"; //"src\\test\\data\\202010"
         Path s1DataPath = Path.of(System.getProperty("user.dir"), s1Dir);
 
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
