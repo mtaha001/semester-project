@@ -110,8 +110,12 @@ class TestSemester {
         assertEquals(s1.getPreRegDate(), "2022-10-31");
     }
 
+
+     
     @Test
     public void testFetchFiles() throws IOException {
+        //Could probably be rewritten to use the test data but passes as is:
+
         // Create a temporary directory and some files
         Path tempDir = Files.createTempDirectory("202220");
         File datesFile = new File(tempDir.toFile(), "dates.txt");
@@ -145,5 +149,18 @@ class TestSemester {
     }
   
 
+    /**Tests that Semester creates complete array of Snapshots
+     * from the .csv files in its directory.*/
+    @Test
+    void yieldsSnapshotsArray() throws IOException {
+        String s1Dir = "src/test/data/202220";
+        Path s1DataPath = Path.of(System.getProperty("user.dir"), s1Dir);
+        String directoryPath = s1DataPath.toString();
+
+        Semester s1 = new Semester(directoryPath);
+        assertNotNull(s1.getSnapshotArray());
+        assertThat(s1.getSnapshotArray().size(), equals(156));
+        
+    }
 
 }
