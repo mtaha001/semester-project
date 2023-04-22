@@ -113,7 +113,7 @@ class TestSemester {
     @Test
     public void testFetchFiles() throws IOException {
         // Create a temporary directory and some files
-        Path tempDir = Files.createTempDirectory("temp");
+        Path tempDir = Files.createTempDirectory("202220");
         File datesFile = new File(tempDir.toFile(), "dates.txt");
         File csvFile1 = new File(tempDir.toFile(), "file1.csv");
         File csvFile2 = new File(tempDir.toFile(), "file2.csv");
