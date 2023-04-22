@@ -42,7 +42,7 @@ class TestSemester {
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
         HistoricalEnrDirectories.add(s1DataPath.toString());
 
-        String s2Dir = "src\\test\\data\\202120";
+        String s2Dir = "src/test/data/202120";
         Path s2DataPath = Path.of(System.getProperty("user.dir"), s2Dir);
         HistoricalEnrDirectories.add(s2DataPath.toString());
 
