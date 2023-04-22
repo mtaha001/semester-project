@@ -13,8 +13,12 @@ public class Driver {
             return;
 
         //Determine if the optional Date was given as a parameter
-        boolean dateWasGiven = (args[args.length - 1]).contains("/") || args[args.length - 1].contains("\\");
-
+        //boolean dateWasGiven = (args[args.length - 1]).contains("/") || args[args.length - 1].contains("\\");
+        String optionalDate = null;
+        boolean dateWasGiven = (args.length > 3) && args[3].matches("\\d{4}-\\d{2}-\\d{2}");
+        if (dateWasGiven) {
+            optionalDate = args[3];
+        }
         
         ArrayList<Semester> historicalSemesterList = new ArrayList<Semester>();
 
@@ -43,7 +47,7 @@ public class Driver {
                 String DPRPath = args[i].toString();
             }
 
-            String optionalDate = args[i].toString();
+            //String optionalDate = args[i].toString();
         }
 
     }
