@@ -1,16 +1,20 @@
 package edu.odu.cs.cs350.pne;
 
+import java.util.List;
+
 public class CourseProjection implements Comparable<CourseProjection> {
     private String name;
     private int currentEnrollment;
     private int projectedEnrollment;
     private int totalCap;
+    private List<Offering> offerings;
 
-    public CourseProjection (String name, int currentEnrollment, int projectedEnrollment, int totalCap) {
+    public CourseProjection(String name, List<Offering> offerings, int projectedEnrollment) {
         this.name = name;
-        this.currentEnrollment = currentEnrollment;
+        this.offerings = offerings;
+        this.currentEnrollment = getCurrentEnrollment();
+        this.totalCap = getTotalCap();
         this.projectedEnrollment = projectedEnrollment;
-        this.totalCap = totalCap;
     }
 
     public String getName() {
@@ -18,7 +22,11 @@ public class CourseProjection implements Comparable<CourseProjection> {
     }
 
     public int getCurrentEnrollment() {
-        return currentEnrollment;
+        int total = 0;
+        for (Offering offering : offerings) {
+            total += offering.getOVERALLENR();
+        }
+        return total;
     }
 
     public void setCurrentEnrollment(int currentEnrollment) {
@@ -30,7 +38,19 @@ public class CourseProjection implements Comparable<CourseProjection> {
     }
 
     public int getTotalCap() {
-        return totalCap;
+        int total = 0;
+        for (Offering offering : offerings) {
+            total += offering.getOVERALLCAP();
+        }
+        return total;
+    }
+
+    public List<Offering> getOfferings() {
+        return offerings;
+    }
+
+    public void setOfferings(List<Offering> offerings) {
+        this.offerings = offerings;
     }
 
     @Override

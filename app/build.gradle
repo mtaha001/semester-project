@@ -94,7 +94,7 @@ task clearPages(type: Delete) {
     delete pagesDir
 }
 
-
+  
 
 task workTree(dependsOn: ['clearPages']) { 
     doLast {

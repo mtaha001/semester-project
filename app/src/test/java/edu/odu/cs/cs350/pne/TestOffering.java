@@ -9,41 +9,66 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
+import java.util.List;
 public class TestOffering {
-
     private Offering offering;
-    
-    @BeforeEach
-    public void setUp() {
-        offering = new Offering();
-    }
-    
+    private List<Section> sections;
+
     @Test
-    public void testGetSetINSTRUCTOR() {
-        String instructor = "ZEIL, S";
-        offering.setINSTRUCTOR(instructor);
-        assertEquals(instructor, offering.getINSTRUCTOR());
+    public void testGetINSTRUCTOR() {
+        sections = new ArrayList<>();
+        Section section1 = new Section();
+        Section section2 = new Section();
+        sections.add(section1);
+        sections.add(section2);
+        offering = new Offering("Test Course", sections);
+        offering.setINSTRUCTOR("Test Instructor");
+        String result = offering.getINSTRUCTOR();
+        assertEquals("Test Instructor", result);
     }
-    
+
     @Test
-    public void testGetSetCRSE() {
-        String crse = "350";
-        offering.setCRSE(crse);
-        assertEquals(crse, offering.getCRSE());
+    public void testGetCRSE() {
+        sections = new ArrayList<>();
+        Section section1 = new Section();
+        Section section2 = new Section();
+        sections.add(section1);
+        sections.add(section2);
+        offering = new Offering("Test Course", sections);
+        offering.setCRSE("TEST");
+        String result = offering.getCRSE();
+        assertEquals("TEST", result);
     }
-    
+
     @Test
-    public void testGetSetOVERALLENR() {
-        String overallEnr = "45";
-        offering.setOVERALLENR(overallEnr);
-        assertEquals(overallEnr, offering.getOVERALLENR());
+    public void testGetOVERALLENR() {
+        Section section1 = new Section();
+        section1.setOVERALLENR(20);
+        Section section2 = new Section();
+        section2.setOVERALLENR(30);
+        List<Section> sections = new ArrayList<>();
+        sections.add(section1);
+        sections.add(section2);
+        Offering offering = new Offering("Computer Science 101", sections);
+        assertEquals(50, offering.getOVERALLENR());
     }
-    
+
     @Test
-    public void testGetSetOVERALLCAP() {
-        String overallCap = "60";
-        offering.setOVERALLCAP(overallCap);
-        assertEquals(overallCap, offering.getOVERALLCAP());
+    public void testGetOVERALLCAP() {
+        Section section1 = new Section();
+        section1.setOVERALLCAP(20);
+        Section section2 = new Section();
+        section2.setOVERALLCAP(30);
+        List<Section> sections = new ArrayList<>();
+        sections.add(section1);
+        sections.add(section2);
+        Offering offering = new Offering("Computer Science 101", sections);
+        assertEquals(50, offering.getOVERALLCAP());
     }
+
+   
+    
+
+    
     
 }

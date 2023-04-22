@@ -3,12 +3,12 @@ package edu.odu.cs.cs350.pne;
 import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvBindByName;
-import java.util.ArrayList;
+import java.util.List;
 
 
 public class Offering {
 
-    private ArrayList<Section> sections;
+    private List<Section> sections;
 
     @CsvBindByName(column = "INSTRUCTOR")
     private String INSTRUCTOR;
@@ -16,12 +16,27 @@ public class Offering {
     @CsvBindByName(column = "CRSE")
     private String CRSE; //course
     
-    @CsvBindByName(column = "OVERALL ENR")
-    private String OVERALLENR; //overall enrollment
+    // @CsvBindByName(column = "OVERALL ENR")
+    // private int OVERALLENR; //overall enrollment
 
-    @CsvBindByName(column = "OVERALL CAP")
-    private String OVERALLCAP; //overall capacity
+    // @CsvBindByName(column = "OVERALL CAP")
+    // private int OVERALLCAP; //overall capacity
 
+    private String courseName;
+
+    private int OVERALLENR;
+
+    private int OVERALLCAP;
+
+
+    
+    public Offering(String courseName, List<Section> sections) {
+        this.courseName = courseName;
+        this.sections = sections;
+        this.OVERALLCAP = getOVERALLCAP();
+        this.OVERALLENR = getOVERALLENR();
+        
+    }
     
     /**
      * getINSTRUCTOR()
@@ -46,8 +61,12 @@ public class Offering {
      * 
      * @return the OVERALLENR
      */
-    public String getOVERALLENR(){
-        return OVERALLENR;
+    public int getOVERALLENR(){
+        int total = 0;
+        for (Section section : sections) {
+            total += section.getOVERALLENR();
+        }
+        return total;
     }
 
     /**
@@ -55,8 +74,12 @@ public class Offering {
      * 
      * @return the OVERALLCAP
      */
-    public String getOVERALLCAP(){
-        return OVERALLCAP;
+    public int getOVERALLCAP(){
+        int total = 0;
+        for (Section section : sections) {
+            total += section.getOVERALLCAP();
+        }
+        return total;
     }
 
     // setter for INSTRUCTOR
@@ -70,13 +93,22 @@ public class Offering {
     }
 
     //setter for OVERALLENR
-    public void setOVERALLENR(String overallenr){
+    public void setOVERALLENR(int overallenr){
         this.OVERALLENR = overallenr;
     }
 
     //stter for OVERCAP
-    public void setOVERALLCAP(String overallcap){
+    public void setOVERALLCAP(int overallcap){
         this.OVERALLCAP = overallcap;
     }
+
+    public List<Section> getOfferings() {
+        return sections;
+    }
+
+    public void setOfferings(List<Section> sections) {
+        this.sections = sections;
+    }
+
 
 }
