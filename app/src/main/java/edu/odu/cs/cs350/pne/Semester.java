@@ -48,19 +48,18 @@ public class Semester {
 
         directoryLocation = directoryLoc;
 
-        // Convert the directory string to a valid path string
+        // Convert the directory string to a valid path string-----------------
         Path path = Paths.get(directoryLocation);
         directoryLocation = path.toString();
         System.out.println(directoryLocation);
 
-        // Code will be the name of the last folder in the directory
+        // Define semester's code as it's folder name--------------------------
         code = path.getFileName().toString();
 
-        // Extract semester's year from its code (first 4 chars) and convert to int:
+        // Define semester's year from it's code-------------------------------
         year = Integer.parseInt(code.substring(0, 4));
 
-        // Extract semester's season from its code (last 2 chars) and convert
-        // to a representative string:
+        // Define semester's season--------------------------------------------
         String seasonID;
         seasonID = code.substring(4, 6);
         switch (seasonID) {
@@ -75,28 +74,34 @@ public class Semester {
                 break;
         }
 
-        // Create a File object representing the dates.txt file
+
+        //Define semesters preRegistration Date using it's dates.txt-------------
+        //Create a File object representing the dates.txt file
         File file = new File(directoryLocation, "dates.txt");
 
         // Create a FileReader object to read the file
         FileReader fileReader = new FileReader(file);
-
-        // Create a BufferedReader object to read the file line by line
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         // Read both lines of dates.txt file
         String line;
         line = bufferedReader.readLine();
         preRegistrationDate = line; // read pre-registration date
-
         // line = bufferedReader.readLine();
-
-        // Close the BufferedReader
         bufferedReader.close();
 
         if (!file.exists()) {
             throw new IOException("Missing dates.txt in semester code.");
         }
+
+        //Define Semester's array of Snapshots ----------------------------------
+        ArrayList<Snapshot> snapshots = new ArrayList<Snapshot>();
+        List<File> csvFileList = fetchFiles();
+        for(File csvFile : csvFileList){
+            Snapshot snapshot = new Snapshot(csvFile);
+            snapshots.add(snapshot);
+        }
+   
     }
 
 
@@ -112,13 +117,13 @@ public class Semester {
      * @throws IOException
      */
     public List<File> fetchFiles() throws IOException {
-        this.csvFiles = new ArrayList<File>();
+        ArrayList<File> csvFiles = new ArrayList<File>();
 
         // Find the dates file first to set the pre-registration and add deadline dates
         try (Stream<Path> files = Files.walk(Paths.get(this.directoryLocation))) {
             files.forEach(filePath -> {
                 if (Files.isRegularFile(filePath) && filePath.toString().endsWith(".csv")) {
-                    this.csvFiles.add(filePath.toFile());
+                    csvFiles.add(filePath.toFile());
                 } else if (Files.isRegularFile(filePath) && filePath.toString().endsWith("dates.txt")) {
                     this.dates = filePath.toFile();
                     try {
@@ -131,11 +136,11 @@ public class Semester {
         }
 
         // If no CSV files were found, throw an IOException
-        if (this.csvFiles.isEmpty()) {
+        if (csvFiles.isEmpty()) {
             throw new IOException("No CSV files found in semester directory.");
         }
 
-        return this.csvFiles;
+        return csvFiles;
     }
 
 
@@ -210,6 +215,15 @@ public class Semester {
         return addDeadlineDate;
     }
 
+
+    public ArrayList<Snapshot> getSnapshots() {
+        return snapshots;
+    }
+
+
+    public void setSnapshots(ArrayList<Snapshot> snapshots) {
+        this.snapshots = snapshots;
+    }
 
 }
 

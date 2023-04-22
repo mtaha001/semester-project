@@ -6,6 +6,7 @@ package edu.odu.cs.cs350.pne;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.io.File;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -19,7 +20,7 @@ public class Snapshot {
     private String date;
 
     // Constructor to initialize the ArrayList
-    public Snapshot() {
+    public Snapshot(File csvFile) {
         sections = new ArrayList<>();
     }
 
