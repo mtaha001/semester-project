@@ -3,6 +3,8 @@ package edu.odu.cs.cs350.pne;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 
 
 public class Driver {
@@ -46,10 +48,18 @@ public class Driver {
             else {
                 String DPRPath = args[i].toString();
             }
-
             //String optionalDate = args[i].toString();
         }
-
+        if (optionalDate != null) {
+            LocalDate date = null;
+            try {
+                date = LocalDate.parse(optionalDate);
+            } catch (DateTimeParseException e) {
+                System.err.println("Invalid date format. Please provide the date in the format YYYY-MM-DD.");
+                return;
+            }
+            // Use the date for analysis
+        }
     }
 
     /**
