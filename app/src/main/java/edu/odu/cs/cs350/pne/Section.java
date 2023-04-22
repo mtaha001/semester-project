@@ -33,7 +33,18 @@ public class Section {
     @CsvBindByName(column = "OVERALL ENR")
     private int OVERALLENR;
 
-   
+   public Section(){
+    CRN = 0;
+    SUBJ = "";
+    CRSE = "";
+    ENR = 0;
+    LINK = "";
+    XLSTCAP = 0;
+    XLSTGROUP = "";
+    OVERALLCAP = 0;
+    OVERALLENR = 0;
+
+   }
 
     /*
      * getCRN()

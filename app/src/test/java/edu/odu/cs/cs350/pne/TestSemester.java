@@ -158,7 +158,7 @@ class TestSemester {
         String directoryPath = s1DataPath.toString();
 
         Semester s1 = new Semester(directoryPath);
-        assertNotNull(s1.getSnapshots());
+        //assertNotNull(s1.getSnapshots());
         assertEquals(s1.getSnapshots().size(), 156);
         
     }

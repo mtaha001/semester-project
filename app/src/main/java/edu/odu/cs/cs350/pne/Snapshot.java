@@ -22,6 +22,7 @@ public class Snapshot {
     // Constructor to initialize the ArrayList
     public Snapshot(File csvFile) {
         sections = new ArrayList<>();
+        sections.add(new Section());
     }
 
     // Getter for the ArrayList of sections
