@@ -138,7 +138,7 @@ public class Semester {
     }
 
 
-    /**setDates()Sets the pre-registration and add deadline dates based on 
+    /**setDates() Sets the pre-registration and add deadline dates based on 
      * the data found in the "dates.txt" file
      * @throws IOException 
      * @param file a dates.txt file from a semester directory**/

@@ -15,7 +15,7 @@ public class Driver {
         //Determine if the optional Date was given as a parameter
         boolean dateWasGiven = (args[args.length - 1]).contains("/") || args[args.length - 1].contains("\\");
 
-        // 
+        
         ArrayList<Semester> historicalSemesterList = new ArrayList<Semester>();
 
         // Loop through the provided parameters and initialize the correct
