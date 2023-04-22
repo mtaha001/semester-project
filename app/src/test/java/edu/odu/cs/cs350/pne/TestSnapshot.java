@@ -22,7 +22,7 @@ public class TestSnapshot {
     @BeforeEach
     public void setUp() {
 
-        snapshot1 = new Snapshot();
+        snapshot1 = new Snapshot(null);
         
     }
 
