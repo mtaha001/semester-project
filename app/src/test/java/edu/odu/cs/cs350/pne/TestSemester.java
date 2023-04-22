@@ -66,16 +66,16 @@ class TestSemester {
 
         ArrayList<String> HistoricalEnrDirectories = new ArrayList<String>();
 
-        String s1Dir = "src\\test\\data\\202010";
+        String s1Dir = "src/test/data/202010";
         Path s1DataPath = Path.of(System.getProperty("user.dir"), s1Dir);
         HistoricalEnrDirectories.add(s1DataPath.toString());
 
 
-        String s2Dir = "src\\test\\data\\202120";
+        String s2Dir = "src/test/data/202120";
         Path s2DataPath = Path.of(System.getProperty("user.dir"), s2Dir);
         HistoricalEnrDirectories.add(s2DataPath.toString());
 
-        String s3Dir = "src\\test\\data\\202230";
+        String s3Dir = "src/test/data/202230";
         Path s3DataPath = Path.of(System.getProperty("user.dir"), s3Dir);
         HistoricalEnrDirectories.add(s3DataPath.toString());
 
@@ -101,7 +101,7 @@ class TestSemester {
 
     @Test
     void yieldsCorrectDates() throws IOException {
-        String s1Dir = "src\\test\\data\\202220";
+        String s1Dir = "src/test/data/202220";
         Path s1DataPath = Path.of(System.getProperty("user.dir"), s1Dir);
         String directoryPath = s1DataPath.toString();
 
