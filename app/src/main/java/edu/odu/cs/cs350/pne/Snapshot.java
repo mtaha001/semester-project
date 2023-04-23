@@ -50,8 +50,7 @@ public class Snapshot {
         return date;
     }
 
-   
-        
+
     
     
 
