@@ -12,7 +12,7 @@ plugins {
     id 'java'
     id 'pmd'
     id 'jacoco'
-   id 'edu.odu.cs.report_accumulator' version '1.4'
+    id 'edu.odu.cs.report_accumulator' version '1.4'
 }
 
 repositories {
@@ -59,6 +59,7 @@ tasks.named('test') {
 test {
     ignoreFailures = true
     useJUnitPlatform()
+    finalizedBy jacocoTestReport 
 }
 
 application { //Allows  ./gradlew run --args=path-to-test-data
@@ -166,3 +167,19 @@ pmd {
 }
 pmdTest.enabled = false
 
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+}
+
+jacoco {
+    toolVersion = "0.8.8"
+    reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = false
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+    }
+}
