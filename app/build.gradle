@@ -12,7 +12,7 @@ plugins {
     id 'java'
     id 'pmd'
     id 'jacoco'
-    id 'edu.odu.cs.report_accumulator' version '1.4'
+   id 'edu.odu.cs.report_accumulator' version '1.4'
 }
 
 repositories {
@@ -153,15 +153,16 @@ task deployReports(type: Delete, dependsOn: 'pushWebsite'){
 
 }
 
-//reportStats {
-	//reportsURL = 'https://project/reports/url/'
-    //htmlSourceDir = file('src/main/html')  // default value
-   // reportsDir = file('build/reports') // default value
-   // buildID = "12345" 
-//}
+reportStats {
+   reportsURL = 'https://project/reports/url/'
+   htmlSourceDir = file('src/main/html')  // default value
+   reportsDir = file('build/reports') // default value
+   buildID = "12345" 
+}
 
 pmd {
     ignoreFailures = true
     consoleOutput = false
 }
 pmdTest.enabled = false
+
