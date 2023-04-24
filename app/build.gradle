@@ -120,7 +120,7 @@ task copyReports (type: Copy, dependsOn: ['reports', 'reportStats', 'workTree'])
     into pagesDir
 }
 
-task copyWebsite (dependsOn: ['copyReports']) {
+task copyWebsite (dependsOn: ['copyReports', 'copyJacoco']) {
 }
 
 task commitWebsite (dependsOn: 'copyWebsite') {
@@ -182,4 +182,9 @@ jacocoTestReport {
         csv.required = false
         html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
+}
+
+task copyJacoco(type: Copy, dependsOn: ['jacocoTestReport', 'workTree']) {
+    from 'build/jacocoHtml'
+    into "$pagesDir/jacoco"
 }
