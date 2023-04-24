@@ -1,5 +1,3 @@
-//summary projection
-
 package edu.odu.cs.cs350.pne;
 
 import java.time.LocalDate;
@@ -10,28 +8,47 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
+/**
+* A class representing a summary projection report for multiple courses. It contains a tree set of
+* CourseProjections.
+*/
 public class SummaryProjectionReport {
 
     private TreeSet<CourseProjection> projections;
 	
+   /**
+    * Default constructor
+    * Creates a new SummaryProjectionReport object with an empty tree set of CourseProjections.
+    */
     public SummaryProjectionReport() {
         projections = new TreeSet<>();
     }
     
+   /**
+    * Adds a CourseProjection to the tree set of projections.
+    * @param courseProjection The CourseProjection to add.
+    */
     public void addCourseProjection(CourseProjection courseProjection) {
         projections.add(courseProjection);
     }
     
+   /**
+    * Returns a list of all CourseProjections in the tree set.
+    * @return A list of all CourseProjections in the tree set.
+    */
     public List<CourseProjection> getProjections() {
         return new ArrayList<>(projections);
     }
 
 
-    /*
-     * This method calculate the percentage of time elapsed
-     * 
-     * @param directoryLoc - Strings represent start date, end date and snap date
-     */
+  /**
+   * Calculates the percentage of time elapsed between a start date and an end date, based on a
+   * current date.
+   * @param startDate The start date of the enrollment period.
+   * @param endDate The end date of the enrollment period.
+   * @param snapDate The current date.
+   * @return The percentage of time elapsed between the start and end dates, as a double.
+   */
     public static double calcPercentElapsed(String startDate, String endDate, String snapDate) { 
 
         LocalDate start = LocalDate.parse(startDate);
@@ -52,6 +69,13 @@ public class SummaryProjectionReport {
         
     }
 
+   /**
+    *Displays the CourseProjections in the tree set, along with the percentage of time elapsed
+    *since the start of the enrollment period.
+    * @param startDate The start date of the enrollment period.
+    * @param endDate The end date of the enrollment period.
+    * @param currentDate The current date.
+    */
     public void displayProjections(String startDate, String endDate, String currentDate) {
         double percentElapsed = calcPercentElapsed(startDate, endDate, currentDate);
     

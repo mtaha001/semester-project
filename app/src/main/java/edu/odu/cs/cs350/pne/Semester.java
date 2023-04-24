@@ -215,12 +215,18 @@ public class Semester {
         return addDeadlineDate;
     }
 
-
+    /**
+     * Returns the list of Snapshot objects stored in this object.
+     * @return an ArrayList containing the Snapshot objects stored in this object
+     */
     public ArrayList<Snapshot> getSnapshots() {
         return snapshots;
     }
 
-
+    /**
+    * Sets the list of Snapshot objects stored in this object to the specified ArrayList of Snapshot objects.
+    * @param snapshots the ArrayList of Snapshot objects to be set as the new list of snapshots for this object
+    */
     public void setSnapshots(ArrayList<Snapshot> snapshots) {
         this.snapshots = snapshots;
     }

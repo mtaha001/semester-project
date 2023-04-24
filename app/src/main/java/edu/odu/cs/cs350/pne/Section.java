@@ -160,10 +160,18 @@ public class Section {
         this.XLSTGROUP = xlstgroup;
     }
 
+    /**
+    * Sets the overall capacity of this Offering object to the specified integer value.
+    * @param overallcap the integer value to be set as the overall capacity of this Offering object
+    */
     public void setOVERALLCAP(int overallcap){
         this.OVERALLCAP = overallcap;
     }
 
+    /**
+    * Sets the overall enrollment of this Offering object to the specified integer value.
+    * @param overallenr the integer value to be set as the overall enrollment of this Offering object
+    */
     public void setOVERALLENR(int overallenr){
         this.OVERALLENR = overallenr;
     }
