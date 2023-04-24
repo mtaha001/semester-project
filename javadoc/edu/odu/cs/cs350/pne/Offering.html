@@ -154,7 +154,9 @@ extends java.lang.Object</pre>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.util.List)">Offering</a></span>&#8203;(java.lang.String&nbsp;courseName,
         java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;&nbsp;sections)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Constructs a new Offering object with the specified course name and list of Section objects.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -191,7 +193,9 @@ extends java.lang.Object</pre>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOfferings()">getOfferings</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the list of Section objects stored in this object.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>int</code></td>
@@ -220,7 +224,9 @@ extends java.lang.Object</pre>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOfferings(java.util.List)">setOfferings</a></span>&#8203;(java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;&nbsp;sections)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the list of Section objects stored in this object to the specified List of Section objects.</div>
+</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -264,6 +270,13 @@ extends java.lang.Object</pre>
 <h4>Offering</h4>
 <pre>public&nbsp;Offering&#8203;(java.lang.String&nbsp;courseName,
                 java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;&nbsp;sections)</pre>
+<div class="block">Constructs a new Offering object with the specified course name and list of Section objects.
+ Initializes the object's overall capacity and overall enrollment based on the current values of the sections.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>courseName</code> - the name of the course offered</dd>
+<dd><code>sections</code> - the List of Section objects offered for the course</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -375,6 +388,11 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getOfferings</h4>
 <pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;&nbsp;getOfferings()</pre>
+<div class="block">Returns the list of Section objects stored in this object.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a List containing the Section objects stored in this object</dd>
+</dl>
 </li>
 </ul>
 <a id="setOfferings(java.util.List)">
@@ -384,6 +402,11 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>setOfferings</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setOfferings&#8203;(java.util.List&lt;<a href="Section.html" title="class in edu.odu.cs.cs350.pne">Section</a>&gt;&nbsp;sections)</pre>
+<div class="block">Sets the list of Section objects stored in this object to the specified List of Section objects.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>sections</code> - the List of Section objects to be set as the new list of offerings for this object</dd>
+</dl>
 </li>
 </ul>
 </li>

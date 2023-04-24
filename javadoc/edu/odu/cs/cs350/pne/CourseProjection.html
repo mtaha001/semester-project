@@ -137,6 +137,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public class <span class="typeNameLabel">CourseProjection</span>
 extends java.lang.Object
 implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class in edu.odu.cs.cs350.pne">CourseProjection</a>&gt;</pre>
+<div class="block">Represents a projected enrollment for a single course, including its name, current enrollment, projected enrollment,
+ total capacity, and a list of its offerings.</div>
 </li>
 </ul>
 </div>
@@ -160,7 +162,9 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.util.List,int)">CourseProjection</a></span>&#8203;(java.lang.String&nbsp;name,
                 java.util.List&lt;<a href="Offering.html" title="class in edu.odu.cs.cs350.pne">Offering</a>&gt;&nbsp;offerings,
                 int&nbsp;projectedEnrollment)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Constructs a CourseProjection object with the given name, list of offerings, and projected enrollment.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -183,47 +187,66 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#compareTo(edu.odu.cs.cs350.pne.CourseProjection)">compareTo</a></span>&#8203;(<a href="CourseProjection.html" title="class in edu.odu.cs.cs350.pne">CourseProjection</a>&nbsp;other)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Compares this CourseProjection object with the specified CourseProjection object for order based on their names.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCurrentEnrollment()">getCurrentEnrollment</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the current enrollment of the course, calculated as the sum of the enrollment of each offering.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getName()">getName</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the name of the course.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="Offering.html" title="class in edu.odu.cs.cs350.pne">Offering</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOfferings()">getOfferings</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the list of offerings for the course.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getProjectedEnrollment()">getProjectedEnrollment</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the projected enrollment of the course.</div>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTotalCap()">getTotalCap</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the total capacity of the course, calculated as the sum of the capacity of each offering.</div>
+</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCurrentEnrollment(int)">setCurrentEnrollment</a></span>&#8203;(int&nbsp;currentEnrollment)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the current enrollment of the course to the given value.</div>
+</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOfferings(java.util.List)">setOfferings</a></span>&#8203;(java.util.List&lt;<a href="Offering.html" title="class in edu.odu.cs.cs350.pne">Offering</a>&gt;&nbsp;offerings)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the list of offerings for the course to the given value.</div>
+</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns a string representation of the course projection, including its name, current enrollment, projected enrollment,
+ and total capacity, with an asterisk (*) appended to the beginning if the projected enrollment is greater than the total capacity.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -258,6 +281,13 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <pre>public&nbsp;CourseProjection&#8203;(java.lang.String&nbsp;name,
                         java.util.List&lt;<a href="Offering.html" title="class in edu.odu.cs.cs350.pne">Offering</a>&gt;&nbsp;offerings,
                         int&nbsp;projectedEnrollment)</pre>
+<div class="block">Constructs a CourseProjection object with the given name, list of offerings, and projected enrollment.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the course.</dd>
+<dd><code>offerings</code> - The list of offerings for the course.</dd>
+<dd><code>projectedEnrollment</code> - The projected enrollment of the course.</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -277,6 +307,11 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <li class="blockList">
 <h4>getName</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getName()</pre>
+<div class="block">Returns the name of the course.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The name of the course.</dd>
+</dl>
 </li>
 </ul>
 <a id="getCurrentEnrollment()">
@@ -286,6 +321,11 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <li class="blockList">
 <h4>getCurrentEnrollment</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getCurrentEnrollment()</pre>
+<div class="block">Returns the current enrollment of the course, calculated as the sum of the enrollment of each offering.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The current enrollment of the course.</dd>
+</dl>
 </li>
 </ul>
 <a id="setCurrentEnrollment(int)">
@@ -295,6 +335,11 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <li class="blockList">
 <h4>setCurrentEnrollment</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setCurrentEnrollment&#8203;(int&nbsp;currentEnrollment)</pre>
+<div class="block">Sets the current enrollment of the course to the given value.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>currentEnrollment</code> - The new current enrollment of the course.</dd>
+</dl>
 </li>
 </ul>
 <a id="getProjectedEnrollment()">
@@ -304,6 +349,11 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <li class="blockList">
 <h4>getProjectedEnrollment</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getProjectedEnrollment()</pre>
+<div class="block">Returns the projected enrollment of the course.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The projected enrollment of the course.</dd>
+</dl>
 </li>
 </ul>
 <a id="getTotalCap()">
@@ -313,6 +363,11 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <li class="blockList">
 <h4>getTotalCap</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getTotalCap()</pre>
+<div class="block">Returns the total capacity of the course, calculated as the sum of the capacity of each offering.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The total capacity of the course.</dd>
+</dl>
 </li>
 </ul>
 <a id="getOfferings()">
@@ -322,6 +377,11 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <li class="blockList">
 <h4>getOfferings</h4>
 <pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="Offering.html" title="class in edu.odu.cs.cs350.pne">Offering</a>&gt;&nbsp;getOfferings()</pre>
+<div class="block">Returns the list of offerings for the course.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The list of offerings for the course.</dd>
+</dl>
 </li>
 </ul>
 <a id="setOfferings(java.util.List)">
@@ -331,6 +391,11 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <li class="blockList">
 <h4>setOfferings</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setOfferings&#8203;(java.util.List&lt;<a href="Offering.html" title="class in edu.odu.cs.cs350.pne">Offering</a>&gt;&nbsp;offerings)</pre>
+<div class="block">Sets the list of offerings for the course to the given value.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>offerings</code> - The new list of offerings for the course.</dd>
+</dl>
 </li>
 </ul>
 <a id="toString()">
@@ -340,9 +405,13 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <li class="blockList">
 <h4>toString</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;toString()</pre>
+<div class="block">Returns a string representation of the course projection, including its name, current enrollment, projected enrollment,
+ and total capacity, with an asterisk (*) appended to the beginning if the projected enrollment is greater than the total capacity.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A string representation of the course projection.</dd>
 </dl>
 </li>
 </ul>
@@ -353,9 +422,12 @@ implements java.lang.Comparable&lt;<a href="CourseProjection.html" title="class 
 <li class="blockList">
 <h4>compareTo</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;compareTo&#8203;(<a href="CourseProjection.html" title="class in edu.odu.cs.cs350.pne">CourseProjection</a>&nbsp;other)</pre>
+<div class="block">Compares this CourseProjection object with the specified CourseProjection object for order based on their names.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>compareTo</code>&nbsp;in interface&nbsp;<code>java.lang.Comparable&lt;<a href="CourseProjection.html" title="class in edu.odu.cs.cs350.pne">CourseProjection</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>other</code> - the CourseProjection object to be compared</dd>
 </dl>
 </li>
 </ul>
