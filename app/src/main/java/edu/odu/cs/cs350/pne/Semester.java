@@ -19,6 +19,13 @@ import java.nio.file.Files;
 import java.util.List;
 import java.util.stream.Stream;
 
+import com.opencsv.CSVParser;
+import com.opencsv.CSVParserBuilder;
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+import java.io.Reader;
+
+
 public class Semester {
 
     private String directoryLocation;
@@ -156,6 +163,34 @@ public class Semester {
         addDeadlineDate = bufferedReader.readLine();
     
         bufferedReader.close();
+    }
+
+     /**
+     * Read a csv file, storing each field in the line into an
+     * element in a string array. The array representing the csv line
+     * is then added to a list.
+     *
+     * @param reader :the reader for the csv file
+     * @return list :list of string arrays; each element in the list
+     *               represents a line in the csv file.
+     * @throws Exception
+     */
+    public List<String[]> readCsv(Reader reader) throws Exception {
+        CSVParser parser = new CSVParserBuilder()
+                .withSeparator(',')
+                .withEscapeChar('\\')
+                .withQuoteChar('\"')
+                .withIgnoreQuotations(true)
+                .build();
+        List<String[]> list = new ArrayList<>();
+        CSVReader csvReader = new CSVReaderBuilder(reader)
+                .withSkipLines(1) // Skip the first line (assumed to contain headers)
+                .withCSVParser(parser)
+                .build();
+        list = csvReader.readAll();
+        reader.close();
+        csvReader.close();
+        return list;
     }
     
     
