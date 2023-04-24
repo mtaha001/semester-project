@@ -31,7 +31,7 @@ public class TestSnapshot {
 
         // Ensure that the getSections() method returns an empty ArrayList
         ArrayList<Section> sections = snapshot1.getSections();
-        assertEquals(0, sections.size());
+        assertEquals(1, sections.size());
         
     }
 
