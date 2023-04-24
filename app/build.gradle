@@ -155,7 +155,7 @@ task deployReports(type: Delete, dependsOn: 'pushWebsite'){
 }
 
 reportStats {
-   reportsURL = 'https://project/reports/url/'
+   reportsURL = 'https://mtaha001.github.io/semester-project/tests/test/'
    htmlSourceDir = file('src/main/html')  // default value
    reportsDir = file('build/reports') // default value
    buildID = "12345" 
