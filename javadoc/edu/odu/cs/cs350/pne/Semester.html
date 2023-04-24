@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -231,6 +231,14 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code>java.util.List&lt;java.lang.String[]&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readCsv(java.io.Reader)">readCsv</a></span>&#8203;(java.io.Reader&nbsp;reader)</code></th>
+<td class="colLast">
+<div class="block">Read a csv file, storing each field in the line into an
+ element in a string array.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDates(java.io.File)">setDates</a></span>&#8203;(java.io.File&nbsp;file)</code></th>
 <td class="colLast">
@@ -238,7 +246,7 @@ extends java.lang.Object</pre>
  the data found in the "dates.txt" file</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSnapshots(java.util.ArrayList)">setSnapshots</a></span>&#8203;(java.util.ArrayList&lt;<a href="Snapshot.html" title="class in edu.odu.cs.cs350.pne">Snapshot</a>&gt;&nbsp;snapshots)</code></th>
 <td class="colLast">
@@ -330,6 +338,28 @@ extends java.lang.Object</pre>
 <dd><code>file</code> - a dates.txt file from a semester directory</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code></dd>
+</dl>
+</li>
+</ul>
+<a id="readCsv(java.io.Reader)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readCsv</h4>
+<pre class="methodSignature">public&nbsp;java.util.List&lt;java.lang.String[]&gt;&nbsp;readCsv&#8203;(java.io.Reader&nbsp;reader)
+                                           throws java.lang.Exception</pre>
+<div class="block">Read a csv file, storing each field in the line into an
+ element in a string array. The array representing the csv line
+ is then added to a list.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>reader</code> - :the reader for the csv file</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>list :list of string arrays; each element in the list
+               represents a line in the csv file.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.Exception</code></dd>
 </dl>
 </li>
 </ul>
