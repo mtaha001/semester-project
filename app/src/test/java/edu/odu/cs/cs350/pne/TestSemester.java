@@ -19,6 +19,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+import com.opencsv.CSVParser;
+import com.opencsv.CSVParserBuilder;
+import java.io.StringReader;
+import java.io.FileWriter;
+
 
 
 class TestSemester {
@@ -163,5 +170,8 @@ class TestSemester {
         //assertEquals(s1.getSnapshots().size(), 156);
         
     }
+
+
+
 
 }
