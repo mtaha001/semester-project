@@ -44,7 +44,7 @@ public class Offering {
     
     /**
      * getINSTRUCTOR()
-     * 
+     * Accessor
      * @return the INSTRUCTOR
      */
     public String getINSTRUCTOR() {
@@ -53,7 +53,7 @@ public class Offering {
 
     /**
      * getCRSE()
-     * 
+     * Accessor
      * @return the CRSE
      */
     public String getCRSE(){
@@ -62,7 +62,7 @@ public class Offering {
 
     /**
      * getOVERALLENR()
-     * 
+     * Accessor
      * @return the OVERALLENR
      */
     public int getOVERALLENR(){
@@ -75,7 +75,7 @@ public class Offering {
 
     /**
      * getOVERALLCAP()
-     * 
+     * Accessor
      * @return the OVERALLCAP
      */
     public int getOVERALLCAP(){
@@ -86,22 +86,38 @@ public class Offering {
         return total;
     }
 
-    // setter for INSTRUCTOR
+    /** setINSTRUCTOR()
+     * Mutator
+     * @param instructor the instructor to attribute to the 
+     *  Offering.
+     */
     public void setINSTRUCTOR(String instructor) {
         this.INSTRUCTOR = instructor;
     }
 
-    //setter for CRSE
+    /** setCRSE()
+     * Mutator
+     * @param crse the course to attribute to the 
+     *  Offering.
+     */
     public void setCRSE(String crse){
         this.CRSE = crse;
     }
 
-    //setter for OVERALLENR
+    /** setOVERALLENR()
+     * Mutator
+     * @param overallenr the total number of students enrolled
+     * in the offering to attribute to the Offering.
+     */
     public void setOVERALLENR(int overallenr){
         this.OVERALLENR = overallenr;
     }
 
-    //setter for OVERCAP
+    /** setOVERALLCAP()
+     * Mutator
+     * @param overallcap the The maximum number of students that can enroll
+     * in the offering
+     */
     public void setOVERALLCAP(int overallcap){
         this.OVERALLCAP = overallcap;
     }
