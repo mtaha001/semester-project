@@ -158,12 +158,18 @@ public class Section {
         this.ENR = enr;
     }
 
-    //setter for XLSTCAP
+    /**set a section's cross-list cap
+     * @param xlistcap the The maximum number of students that 
+     * can enroll in this section
+     */
     public void setXLSTCAP(int xlstcap){
         this.XLSTCAP = xlstcap;
     }
 
-    //setter for XLSTGROUP
+    /**set a section's cross-list group
+     * @param xlistgroup the sections of a course that belongs to a 
+     * single offering.
+     */  
     public void setXLSTGROUP(String xlstgroup)
     {
         this.XLSTGROUP = xlstgroup;
