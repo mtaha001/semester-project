@@ -4,6 +4,7 @@ package edu.odu.cs.cs350.pne;
 // import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvBindByName;
 
+/**Represents a section of a course. */
 public class Section {
 
     @CsvBindByName(column = "CRN")
