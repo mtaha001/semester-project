@@ -9,7 +9,7 @@ import java.time.format.DateTimeParseException;
 /**The Driver for the enrollment projection program */
 public class Driver {
 
-    /**Evaluates the parameters passed and call son the appropriate
+    /**Evaluates the parameters passed and calls on the appropriate
      * classes to generate a Summary Projection Report 
      * and a Detailed Projection Report.
      * @param args  1. One or more semester directory locations of historical data.

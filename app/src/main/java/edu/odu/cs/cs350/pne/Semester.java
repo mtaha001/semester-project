@@ -197,8 +197,7 @@ public class Semester {
     
     
     /**
-     * getCode()
-     * 
+     * Retrieves the semester's code. 
      * @return the Semester's code
      */
     public String getCode() {
@@ -206,8 +205,7 @@ public class Semester {
     }
 
     /**
-     * getDirLoc()
-     * 
+     * Retrieves the semester's directory location. 
      * @return the directory of the semester's data (same as what was input
      *         to command-line)
      *         This may not be utilized.
@@ -217,8 +215,7 @@ public class Semester {
     }
 
     /**
-     * getYear()
-     * 
+     * Retrieves the year the semester takes/took place in. 
      * @return the Semester's year
      */
     public int getYear() {
@@ -226,8 +223,7 @@ public class Semester {
     }
 
     /**
-     * getSeason()
-     * 
+     * Retrieves the semester's Season (Fall, Spring, Summer). 
      * @return the Semester's season (Fall, Spring, or Summer)
      */
     public String getSeason() {
@@ -235,8 +231,7 @@ public class Semester {
     }
 
     /**
-     * getPreRegDate()
-     * 
+     * Retrieves the semester's pre-registration date. 
      * @return pre registration date
      */
     public String getPreRegDate() {
@@ -244,8 +239,7 @@ public class Semester {
     }
 
     /**
-     * getAddDeadLineDate()
-     * 
+     * Retrieves the semester's add deadline date. 
      * @return add deadline date
      */
     public String getAddDeadlineDate(){

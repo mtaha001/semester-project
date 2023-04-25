@@ -5,7 +5,7 @@ import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvBindByName;
 import java.util.List;
 
-/**Represents an course offering. */
+/**Represents a course offering. */
 public class Offering {
 
     private List<Section> sections;
