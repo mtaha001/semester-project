@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.48.0" timestamp="2023-04-25T00:19:47.783">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.48.0" timestamp="2023-04-25T00:25:48.207">
 <file name="/home/runner/work/semester-project/semester-project/app/src/main/java/edu/odu/cs/cs350/pne/CourseProjection.java">
 <violation beginline="10" endline="10" begincolumn="20" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="CourseProjection" variable="name" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
@@ -18,39 +18,39 @@ Overridable method 'getTotalCap' called during object construction
 </violation>
 </file>
 <file name="/home/runner/work/semester-project/semester-project/app/src/main/java/edu/odu/cs/cs350/pne/DetailedProjectionReport.java">
-<violation beginline="60" endline="62" begincolumn="41" endcolumn="9" rule="EmptyIfStmt" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="DetailedProjectionReport" method="CreateWorkbookThroughCLI" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#emptyifstmt" priority="3">
+<violation beginline="62" endline="64" begincolumn="41" endcolumn="9" rule="EmptyIfStmt" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="DetailedProjectionReport" method="CreateWorkbookThroughCLI" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#emptyifstmt" priority="3">
 Avoid empty if statements
 </violation>
-<violation beginline="62" endline="64" begincolumn="16" endcolumn="9" rule="EmptyIfStmt" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="DetailedProjectionReport" method="CreateWorkbookThroughCLI" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#emptyifstmt" priority="3">
+<violation beginline="64" endline="66" begincolumn="16" endcolumn="9" rule="EmptyIfStmt" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="DetailedProjectionReport" method="CreateWorkbookThroughCLI" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#emptyifstmt" priority="3">
 Avoid empty if statements
 </violation>
 </file>
 <file name="/home/runner/work/semester-project/semester-project/app/src/main/java/edu/odu/cs/cs350/pne/Driver.java">
-<violation beginline="19" endline="22" begincolumn="13" endcolumn="34" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="optionalDate" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'optionalDate' (lines '19'-'22').
+<violation beginline="24" endline="27" begincolumn="13" endcolumn="34" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="optionalDate" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'optionalDate' (lines '24'-'27').
 </violation>
-<violation beginline="25" endline="63" begincolumn="29" endcolumn="78" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="historicalSemesterList" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'historicalSemesterList' (lines '25'-'63').
+<violation beginline="30" endline="68" begincolumn="29" endcolumn="78" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="historicalSemesterList" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'historicalSemesterList' (lines '30'-'68').
 </violation>
-<violation beginline="31" endline="31" begincolumn="26" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 's' (lines '31'-'31').
+<violation beginline="36" endline="36" begincolumn="26" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 's' (lines '36'-'36').
 </violation>
-<violation beginline="31" endline="63" begincolumn="26" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 's' (lines '31'-'63').
+<violation beginline="36" endline="68" begincolumn="26" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 's' (lines '36'-'68').
 </violation>
-<violation beginline="49" endline="49" begincolumn="24" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="DPRPath" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'DPRPath' (lines '49'-'49').
+<violation beginline="54" endline="54" begincolumn="24" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="DPRPath" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'DPRPath' (lines '54'-'54').
 </violation>
-<violation beginline="49" endline="63" begincolumn="24" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="DPRPath" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'DPRPath' (lines '49'-'63').
+<violation beginline="54" endline="68" begincolumn="24" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="DPRPath" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'DPRPath' (lines '54'-'68').
 </violation>
-<violation beginline="54" endline="56" begincolumn="17" endcolumn="52" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="date" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'date' (lines '54'-'56').
+<violation beginline="59" endline="61" begincolumn="17" endcolumn="52" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="date" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'date' (lines '59'-'61').
 </violation>
-<violation beginline="56" endline="63" begincolumn="17" endcolumn="52" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="date" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'date' (lines '56'-'63').
+<violation beginline="61" endline="68" begincolumn="17" endcolumn="52" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="main" variable="date" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'date' (lines '61'-'68').
 </violation>
-<violation beginline="74" endline="74" begincolumn="27" endcolumn="27" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="minParametersMet" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+<violation beginline="79" endline="79" begincolumn="27" endcolumn="27" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="edu.odu.cs.cs350.pne" class="Driver" method="minParametersMet" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
 Avoid using Literals in Conditional Statements
 </violation>
 </file>
