@@ -123,7 +123,7 @@ public class Semester {
      * an IOException is thrown.
      *
      * @return List of fetched csv files
-     * @throws IOException
+     * @throws IOException ioexception
      */
     public List<File> fetchFiles() throws IOException {
         ArrayList<File> csvFiles = new ArrayList<File>();
@@ -155,7 +155,7 @@ public class Semester {
 
     /**setDates() Sets the pre-registration and add deadline dates based on 
      * the data found in the "dates.txt" file
-     * @throws IOException 
+     * @throws IOException ioexception
      * @param file a dates.txt file from a semester directory**/
     public void setDates(File file) throws IOException {
         FileReader fileReader = new FileReader(file);
@@ -175,7 +175,7 @@ public class Semester {
      * @param reader :the reader for the csv file
      * @return list :list of string arrays; each element in the list
      *               represents a line in the csv file.
-     * @throws Exception
+     * @throws Exception exception
      */
     public List<String[]> readCsv(Reader reader) throws Exception {
         CSVParser parser = new CSVParserBuilder()

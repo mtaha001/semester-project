@@ -12,6 +12,11 @@ public class Driver {
     /**Evaluates the parameters passed and call son the appropriate
      * classes to generate a Summary Projection Report 
      * and a Detailed Projection Report.
+     * @param args  1. One or more semester directory locations of historical data.
+     *                 2. A single semester directory location. 
+     *              3. A path for the DPR to be written. 
+     *             4. (Optional): A date as YYYY-MM-DD.
+     * @throws IOException 
      */
     public static void main(String[] args) throws IOException {
 
