@@ -13,7 +13,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 
-
+/**Represents a Detailed Projection Report which will
+ * be written to the path indicated in the parameters passed
+ * to the program.
+*/
 public class DetailedProjectionReport {
     private InputStream fileIn;
     private FileOutputStream fileOut; 

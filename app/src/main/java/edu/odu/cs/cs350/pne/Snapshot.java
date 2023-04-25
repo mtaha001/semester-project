@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
-/*
+/**
  * Represents a Snapshot of enrollment data
  */
 public class Snapshot {

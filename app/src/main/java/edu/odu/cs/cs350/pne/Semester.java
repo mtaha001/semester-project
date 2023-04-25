@@ -24,7 +24,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import java.io.Reader;
 
-/*
+/**
  * Represents a semester. 
  * @author Emily Louk
  */
