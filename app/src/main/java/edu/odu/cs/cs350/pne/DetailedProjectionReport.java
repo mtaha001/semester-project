@@ -23,7 +23,7 @@ public class DetailedProjectionReport {
     private String filePath; 
     private String newFilePath;
 
-    // Default Constructor for DPR
+    /** Constructs a DPR object. */
     public DetailedProjectionReport()
     {
         this.filePath ="";
@@ -31,14 +31,16 @@ public class DetailedProjectionReport {
     
     /**
      * getFilePath()
-     * 
+     * Accessor
      * @return filePath 
      */
     public String getFilePath(){
         return filePath; 
     }
 
-    //Set filepath
+    /** Mutator
+     * @param newFilePath the file path to attribute to the Report.
+    */
     public void setFilePath(String newFilePath){
         this.filePath = newFilePath;
     }

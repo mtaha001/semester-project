@@ -8,6 +8,11 @@ import java.time.format.DateTimeParseException;
 
 /**The Driver for the enrollment projection program */
 public class Driver {
+
+    /**Evaluates the parameters passed and call son the appropriate
+     * classes to generate a Summary Projection Report 
+     * and a Detailed Projection Report.
+     */
     public static void main(String[] args) throws IOException {
 
         // Don't continue if there aren't enough arguments provided
