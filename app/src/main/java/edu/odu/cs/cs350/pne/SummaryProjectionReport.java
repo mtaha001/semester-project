@@ -9,8 +9,12 @@ import java.util.List;
 import java.util.TreeSet;
 
 /**
-* A class representing a summary projection report for multiple courses. It contains a tree set of
+*  Represents a summary projection report for the semester
+* which a projection is desired. It contains a tree set of
 * CourseProjections.
+ * Uses some semesters for
+ * historical data, while one Semester will be used as the desired
+ * projection Semester.
 */
 public class SummaryProjectionReport {
 
