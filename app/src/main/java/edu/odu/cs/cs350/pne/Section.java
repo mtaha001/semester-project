@@ -47,7 +47,7 @@ public class Section {
 
    }
 
-    /*
+    /**
      * getCRN()
      * 
      * @return the CRN
@@ -57,7 +57,7 @@ public class Section {
     }
 
 
-    /*
+    /**
      * getSUBJ()
      * 
      * @return the subject
@@ -66,7 +66,7 @@ public class Section {
         return SUBJ;
     }
 
-    /*
+    /**
      * getCRSE()
      * 
      * @return the course
@@ -76,7 +76,7 @@ public class Section {
     }
 
 
-    /*
+    /**
      * getENR()
      * 
      * @return enrolled
@@ -85,7 +85,7 @@ public class Section {
         return ENR;
     }
     
-    /*
+    /**
      * getLINK()
      * 
      * @return linked
@@ -94,7 +94,7 @@ public class Section {
         return LINK;
     }
 
-     /*
+     /**
      * getXLSTCAP()
      * 
      * @return the crosslist cap
@@ -103,7 +103,7 @@ public class Section {
         return XLSTCAP;
     }
 
-    /*
+    /**
      * getXLSTGROUP()
      * 
      * @return grouped crosslisted
@@ -112,7 +112,7 @@ public class Section {
         return XLSTGROUP;
     }
     
-    /*
+    /**
      * getOVERALLCAP()
      * 
      * @return overall capacity
@@ -121,7 +121,7 @@ public class Section {
         return OVERALLCAP;
     }
     
-    /*
+    /**
      * getOVERALLENR()
      * 
      * @return enrolled
@@ -130,22 +130,30 @@ public class Section {
         return OVERALLENR;
     }
     
-    //setter for CRN
+    /**set a section's CRN
+     * @param crn the desired identifier of the section
+     */
     public void setCRN(int crn) {
         this.CRN = crn;
     }
     
-    //setter for SUBJ
+    /**set a section's Subject
+     * @param subj the desired subject of the section
+     */
     public void setSUBJ(String subj) {
         this.SUBJ = subj;
     }
 
-    //setter for CRSE 
+    /**set a section's Course Number
+     * @param crse the desired course number of the section
+     */ 
     public void setCRSE(String crse){
         this.CRSE = crse;
     }
 
-    //setter for ENR 
+    /**set a section's enrollment numbers
+     * @param enr the number of students enrolled in the section
+     */
     public void setENR(int enr){
         this.ENR = enr;
     }
