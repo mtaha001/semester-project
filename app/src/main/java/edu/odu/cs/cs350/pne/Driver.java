@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
-/**The Driver for the enrollment projection program */
+/**The Driver for the enrollment projection program. */
 public class Driver {
 
     /**Evaluates the parameters passed and calls on the appropriate
