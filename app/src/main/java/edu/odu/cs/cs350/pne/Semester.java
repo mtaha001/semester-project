@@ -1,5 +1,4 @@
 /*
- * Semester class, as written in the UML diagram
  * A semester has multiple Snapshots and multiple Offerings.
  * 
  * In the SummaryProjectionReport class, some Semesters are used for
@@ -25,7 +24,10 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import java.io.Reader;
 
-
+/*
+ * Represents a semester. 
+ * @author Emily Louk
+ */
 public class Semester {
 
     private String directoryLocation;
